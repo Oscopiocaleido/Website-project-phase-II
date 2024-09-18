@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="resources/image/Designer.png">
+    <title>AlgoByte</title>
+    <link rel="stylesheet" href="./style.css"> </head>
+<body>
+    <header>
+        <h1>Curso de Python - Lección 3</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Ciclo while en Python. Cómo crear, escribir y usar un while en Python</h2>
+            <p>Los ciclos while son una estructura cíclica, que nos permite ejecutar una o varias líneas de código de manera repetitiva sin necesidad de tener un valor inicial e incluso a veces sin siquiera conocer cuando se va a dar el valor final que esperamos.</p>
+            <p>Con el ciclo while, no conoces el cuándo sino el cómo. Es decir, conocer la condición bajo la cual se va a detener el ciclo, pero no sabes cuántas iteraciones tomará eso, ni cuánto tiempo. Por ello se los llama ciclos indeterminados.</p>
+
+            <h2>¿Cómo funciona un Ciclo While en Python?</h2>
+            <p>Para comprender mejor el funcionamiento del ciclo while, pongamos un buen ejemplo, imaginemos que, por algún motivo, queremos pedirle a un usuario una serie de números cualquiera y que solo dejaremos de hacerlo cuando el usuario ingrese el número 0. Como vemos, en este caso, no sabemos cuántas veces pedir un valor, solo sabemos en qué momento dejar de pedir uno, pues no tenemos ni idea de cuándo al usuario se le va a ocurrir ingresar un cero. Es algo indeterminado para nosotros. Sin embargo, el ciclo while nos permite ejecutar una acción de forma "infinita" hasta que se cumpla alguna condición específica, en nuestro caso sería que el numero sea 0.</p>
+            <p>Vamos a ver ahora cómo es la sintaxis de un ciclo while en Python, así estaremos listos para usarlos en nuestros programas de ahora en adelante cada vez que lo necesitemos.</p>
+
+            <h2>Sintaxis del Ciclo While en Python:</h2>
+            <p>La sintaxis de un ciclo while es incluso más simple y "legible" que la de otros ciclos (que verémos en el siguiente artículo), pues simplemente requerimos tener clara una condición de parada. En realidad, en la mayoría de los lenguajes de alto nivel la manera de escribir un ciclo while (la sintaxis) es incluso muy similar, así que con tan solo tener bien clara una condición de finalización para el ciclo tendremos prácticamente todo hecho.</p>
+            <img src="./resources/image/imagen 3a.png" alt="sintaxis">
+            <p>Como ves, en esencia, es lo mismo que un condicional if(). Sin embargo, ya usas while, y el funcionamiento es completamente diferente, pues esas instrucciones en su interior se ejecutarán tantas veces sea necesario mientras se siga cumpliendo la condición dada. Es muy importante, como siempre en Python, notar los dos puntos al final de la instrucción del while y que, todo lo que vaya en su interior, debe llevar la indentación. Si algo no ha quedado muy claro, ya vamos a ver cómo usar el ciclo while en unos casos más prácticos</p>
+
+            <h2>Ejemplos de Ciclo While en Python</h2>
+            <p>A continuación vamos a ver unos cuantos ejemplos para comprender de manera adecuada el uso de los ciclos while en Python. Recuerda que, si no comprendes alguno de estos ejemplos o tienes alguna pregunta o sugerencia sobre estos o cualquier contenido de la sección, puedes dejarlas en la sección de comentarios. Ejemplo 1: Pedir números por pantalla hasta que alguno sea 0. Vamos a retomar el ejemplo anterior, donde queremos hacer que nuestro programa le pida a un usuario una serie de números cualquiera y que solo dejaremos de hacerlo cuando el usuario ingrese un número igual a cero. Una vez más es un ejemplo sencillo con el que nos aseguraremos de haber comprendido bien todos los conceptos anteriores:</p>
+            <p>Solución Ejemplo 1: Para solucionar esto, debemos tener clara cuál va a ser la condición que se debe cumplir para que el ciclo esté pidiendo el número contantemente. El ciclo se va a detener solo cuando el número ingresado sea igual a 0, así que la condición para que se siga ejecutando es que el numero NO sea 0. Veámoslo entonces.</p>
+            <img src="./resources/image/imagen 3b.png" alt="ejemplo 1">
+            <p>Efectivamente, el código anterior funciona. Sin embargo, hay una mejor forma de resolverlo, pero para ello, debemos introducir una instrucción llamada break de Python. La instrucción break en Python y los ciclos. Como su nombre lo indica, esta instrucción permitirá "romper" o básicamente detener cualquier ciclo en el que se encuentre una vez es ejecutada. Como siempre, una forma de comprenderla será con un ejemplo. Mejoremos entonces el ejemplo anterior un poco, para evitar repetir el llamado a input y el mensaje:</p>
+            <img src="./resources/image/imagen 3c.png" alt="ejemplo">
+            <p>Como puedes ver, al usar while(True), nos aseguramos que el ciclo se ejecute por siempre. Sin embargo, al poner un llamado a break al interior, el cual se ejecuta SOLO cuando el número ingresado en cero, nos aseguramos de que se cierre el ciclo en ese preciso momento. Así nos hemos ahorrado de repetir el llamado a input y al mensaje repetidos. Usa el código del ejemplo y juega un poco, así quedará más claro. Muy bien, en efecto los ciclos while son bastante útiles. Sin embargo, desde el punto de vista de la eficiencia, es recomendable evitarlos en la medida de lo posible. Siempre que vayas a usar un ciclo while o cualquier tipo de ciclo en realidad, deberías preguntarte primero si es totalmente necesario o si existe una manera más efectiva de hacerlo. Incluso, si el ciclo mismo es necesario o si puedes recudir la cantidad de veces que vaya a repetir las instrucciones. Evidentemente, habrá situaciones en las que será casi que imprescindible usar el ciclo, pues por algo existen. Está entonces en nuestra habilidad determinar cuándo usarlos y mejor aún como usarlos de manera efectiva. Algo que la práctica te irá mostrando.</p>
+        </section>
+        <section>
+            <h2>Ciclo for en Python. Cómo crear, escribir y usar un for en Python
+            </h2>
+            <p>Los ciclos for (o ciclos para) son una estructura de control cíclica. Nos permiten ejecutar una o varias líneas de código de forma iterativa (o repetitiva), pero teniendo cierto control y conocimiento sobre las iteraciones. En el ciclo for en Python, es necesario tener un valor inicial y un valor final, y opcionalmente podemos hacer uso del tamaño del "paso" entre cada "giro" o iteración del ciclo. En resumen, un ciclo for en Python es una estructura iterativa para ejecutar un mismo segmento de código una cantidad de veces deseada y conocida. Pues necesitamos conoces previamente un valor de inicio, un tamaño de paso y un valor final para el ciclo. Ya veremos los detalles.</p>
+
+            <h2>¿Cómo funciona un Ciclo For en Python?</h2>
+            <p>Para comprender mejor el funcionamiento del ciclo for, solucionemos un pequeño ejercicio práctico. Supongamos que queremos mostrar los números pares (múltiplos de dos) entre el 500 y el 1000. Con esta información inmediatamente podemos determinar que por medio de un ciclo debemos mostrar una serie de números como la siguiente: 500 502 504 506 ... 600 ... 852 ... 906 ... 980 .. 1000. Tenemos entonces todo lo necesario para nuestro ciclo. Tenemos un valor inicial que sería el 500, un valor final (1000) y tenemos un tamaño de paso que es 2 (los números pares). Estamos ahora en capacidad de determinar los componentes esenciales para un ciclo for. Vamos a ver ahora la sintaxis de un ciclo for en Python, así estaremos listos para usarlos en nuestros programas de ahora en adelante.</p>
+
+            <h2>Sintaxis del Ciclo For en Python:</h2>
+            <p>La sintaxis de un ciclo for es simple en Python. En realidad, en la mayoría de los lenguajes de alto nivel es incluso muy similar, de hecho, con tan solo tener bien claros los 3 componentes del ciclo for (inicio, final y tamaño de paso) tenemos prácticamente todo hecho</p>
+            <img src="./resources/image/imagen 3d.png" alt="sintaxis">
+            <p>Como puedes ver, la magia está en la función range() de Python, pues con esta definimos desde dónde y hasta dónde irá el ciclo, además del tamaño del paso. De hecho, la función range(), solo necesita como mínimo el límite superior, generando así un rango de números desde cero hasta ese límite de uno en uno. Finalmente, esta función omite el último valor, de ese modo, el ciclo va de valor_inicial hasta valor_final - 1 (hay que quitarle uno al valor_final). Por supuesto, como ya se te hará familiar, la instrucción se llama for, i termina con los dos puntos ":", y los que se ejecute en su interior lleva la indentación. Adicionalmente, variable_contadora nos indicará en qué valor exacto del recorrido de ese rango de números nos encontramos.</p>
+
+            <h2>Ejemplos de Ciclo For en Python</h2>
+            <p>A continuación, vamos a ver unos cuantos ejemplos para comprender de manera adecuada el uso de los ciclos for en Python. Recuerda que, si no comprendes alguno de estos ejemplos o tienes alguna pregunta o sugerencia sobre estos o cualquier contenido de la sección, puedes dejarlas en la sección de comentarios. Ejemplo 1: Mostrar en pantalla los números pares. Vamos a retomar el ejemplo mencionado anteriormente, donde deseábamos sacar los números pares entre el número 500 y el 1000 y mostrarlos. Es un ejemplo sencillo con el que nos aseguraremos de haber comprendido bien lo anterior:</p>
+            <p>Solución inicial del ejemplo 1:</p>
+            <img src="./resources/image/imagen 3e.png" alt="ejemplo 1">
+            <p>El código anterior funciona. Sin embargo, seguro notaste al ejecutarlo que solo mostró hasta el 998, incluso aunque 1000 es un número par. Esto es debido a que, como indiqué, range() va hasta el límite superior - 1, así que debes sumarle 1, para que sea incluido, así: Solución mejorada del Ejemplo 1:</p>
+            <img src="./resources/image/imagen 3f.png" alt="">
+            <p>Ejemplo 2: Cuenta regresiva en un ciclo for. Ahora veremos otro ejemplo sencillo. Con un ciclo for que haga sus iteraciones en sentido inverso, es decir, disminuyendo el valor del paso, desde el 100 hasta el 0, veamos:</p>
+            <p>Solución Ejemplo 2: Para este caso, debido a que queremos ir de un número mayor a uno más pequeño, por lo tanto, para este ejemplo el valor inicial será 100 y el valor final será 0. Adicional, el tamaño de paso será de 1 negativo, es decir, -1, así:</p>
+            <img src="./resources/image/imagen 3g.png" alt="">
+            <p>Es importante notar que el ciclo va hasta -1, para que se incluya el 0 en el resultado. Ejemplo 3: Contador con un ciclo for. Para este ejemplo haremos algo un poco más complejo. El ejemplo consiste en contar al interior de un ciclo for, cuántos números entre el 0 y el 10.000 son múltiplos del 33. Para ello haremos uso del operador % (módulo) que obtiene el residuo de una división y también usaremos un pequeño condicional para verificar que el módulo sea cero al dividir por 33.</p>
+            <p>Nota: El operador de módulo (%) obtiene el residuo de una división, por tanto, cuando el residuo es cero implica que la división es exacta y el dividendo es un múltiplo del divisor. Por ejemplo 10 % 3 nos dará el residuo de dividir 10 entre 3, el cual es 1, si calculamos 99 % 33 nos dará cero, pues 99 es múltiplo de 33 (33 * 3 = 99).</p>
+            <p>Solución Ejemplo 3: Para este caso el valor inicial será 0 y el valor final será 10000. Adicional, el tamaño de paso será de 1 (este es el caso más común). Al interior del ciclo, en cada iteración verificaremos si el número en el que estamos es divisible por 33 o no y en caso afirmativo aumentaremos el contador en una unidad así:</p>
+            <p>Nota: Este problema se puede solucionar de maneras mucho más eficientes y adecuadas, pero para fines de comprensión y facilidad lo haremos usando un ciclo for de uno en uno.</p>
+            <img src="./resources/image/imagen 3h.png" alt="">
+            <p>Este ciclo for nos permitirá saber que existen 304 múltiplos del número 33 en los números del 0 al 10000 (incluido el 10000 mismo).</p>
+        </section>
+        <section>
+            <h2>Asignación entre variables y reasignación en Python</h2>
+        </section>
+        <button id="realizar-quiz">Realizar Quiz</button>
+    </main>
+    <footer>
+        <p>©2024 All Rights Reserved. Design by Free Html Templates</p>
+    </footer>
+    <script src="./site.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="resources/image/Designer.png">
+    <title>AlgoByte</title>
+    <link rel="stylesheet" href="./style.css"> </head>
+<body>
+    <header>
+        <h1>Curso de Python - Lección 4</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Aprende a crear funciones en Python. Mejorar la calidad de tus programas en con funciones</h2>
+            <p>Las funciones son una herramienta indispensable al momento de programar en Python (y cualquier otro lenguaje de programacion). Tanto las funciones creadas propiamente por ti como las que son proporcionadas por el lenguaje mismo, permiten automatizar tareas que usualmente se repiten en el código. Al crear funciones en Python y en cualquier programa, mejoramos la modularidad del códio, pues se tienen diferentes componentes (funciones) que se encargan de tareas puntuales. Al mejorar la modularidad, mejoramos la calidad de nuestros programas y nuestra vida como programadores será mucho más sencilla.</p>
+            <p>Al usar funciones, estamos creando componentes de nuestros programas en Python que pueden ser utilizados en cualquier momento para llevar a cabo una tarea común, especialmente, una tarea que requerimos utilizar con frecuencia y que se repite a menudo. Por ejemplo, una función para abrir, otra para cerrar, otra para actualizar, otra para saludar, otra para validar datos, y un largo etcétera.</p>
+
+            <h2>Funciones en Python:</h2>
+            <p>Las funciones son un conjunto de procedimiento encapsulados en un bloque, usualmente reciben parámetros, cuyos valores se utilizan para efectuar operaciones y opcionalmente retornar un valor. Esta definición proviene de la definición de función matemática la cual posee un dominio y un rango, es decir, un conjunto de valores que puede tomar y un conjunto de valores que puede retornar luego de cualquier operación. Sin embargo, en el caso de Python, no siempre debes retornar un valor en tus funciones.</p>
+
+            <h2>Declarando funciones en Python</h2>
+            <p>La sintaxis para declarar una función es muy simple, veamos:</p>
+            <img src="./resources/image/imagen 4a.png" alt="">
+            <p>Nota: Los elementos que se muestran entre "[]", son opcionales. En este caso, tanto la serie de parámetros de la función, como el return, son opcionales.</p>
+            <p>Una función en Python, debe tener un nombre, indicado justo después de la instrucción def, para poder identificarla y llamarla durante la ejecución. Después, al interior de paréntesis, podemos poner los parámetros. Luego de la definición de la "firma" de la función, se indica su funcionamiento, con su respectiva indentación como es habitual en Python. No olvidar los dos puntos para indicar el final de la línea que define a la firma de la función.</p>
+            <p>Acerca de los parámetros: Hay algunos detalles respecto a los parámetros de una función, veamos:</p>
+            <p>Una función pueden tener una cantidad cualquier de parámetros, es decir, pueden tener cero, uno, tres, diez, cien o más parámetros. Aunque habitualmente no suelen tener más de 4 o 5. Si una función tiene más de un parámetro cada uno de ellos debe ir separado por una coma. Los parámetros de una función también tienen un nombre que los identifica. Consejos acerca de return. Debes tener en cuenta dos cosas importantes con la sentencia return:</p>
+            <p>Cualquier instrucción que se encuentre después de la ejecución de return NO será ejecutada. Es común encontrar funciones con múltiples sentencias return al interior de condicionales, pero una vez que el código ejecuta una sentencia return lo que haya de allí hacia abajo no se ejecutará. En python, return puede devolver cero o muchos valores. Si es más de uno, se separan por coma. Veamos algunos ejemplos.</p>
+        </section>
+        <section>
+            <h2>Ejemplos de funciones en Python</h2>
+            <p>Veamos algunos ejemplos prácticos de funciones en Python.</p>
+            <p>Ejemplo 1:</p>
+            <img src="./resources/image/imagen 4b.png" alt="">
+            <p>Como puedes ver es un ejemplo sencillo. Si ejecutas ese programa, la función te retornará el valor de suma que es 60 (50 + 10). Las líneas posteriores no se ejecutarán nunca, aunque no generan error alguno, no tienen utilidad. Puedes notar que para este caso es lo mismo haber escrito return suma que escribir return 50 + 10. Ambas líneas funcionan equivalentemente.</p>
+            <p>Ejemplo 2:</p>
+            <img src="./resources/image/imagen 4c.png" alt="">
+            <p>Aquí hicimos uso de múltiples sentencias return y aprovechamos la característica de que al ser ejecutadas finalizan inmediatamente la ejecución de la parte restante de la función. De este modo podemos asegurar que la función retornará 'a' únicamente cuando el valor del parámetro n sea cero y retornará un 'x' en los demás casos.</p>
+            <img src="./resources/image/imagen 4d.png" alt="">
+            <p>Aquí ya tenemos una función que recibe dos parámetros, uno de ellos es usado en el condicional y el otro para mostrar su valor por pantalla con print, esta vez, retornamos valores enteros 0 y 1, según fuera el valor del parámetro n.</p>
+            <p>Funciones que no retornan valores: Debido a que el return es opcional, pueden existir entonces "funciones" que no retornen ningún valor. Veamos un ejemplo:</p>
+
+            <h2>Ejemplo de función sin return</h2>
+            <img src="./resources/image/imagen 4e.png" alt="">
+            <p>De este ejemplo podemos ver que ya no se retorna un valor. Sin embargo, nada nos impide hacer uso de return, para interrumpir la ejecución de la función en ese punto.</p>
+            <p>Invocando funciones y procedimientos en Python: Ya hemos visto cómo se crean y cómo se ejecutan las funciones en Python, ahora veamos cómo hacemos uso de ellas.</p>
+            <img src="./resources/image/imagen 4f.png" alt="">
+            <p>Como puedes notar es bastante sencillo invocar o llamar funciones en Python (de hecho en cualquier lenguaje actual). Necesitas el nombre de la función y enviarle el valor de los parámetros (los argumentos). Hay que hacer algunas salvedades respecto a esto.</p>
+        </section>
+        <section>
+            <h2>Detalles para invocar funciones</h2>
+            <p>El nombre de la función debe coincidir exactamente al momento de invocarla. El orden de los parámetros debe coincidir. Hay que tener cuidado al momento de enviar los argumentos, debemos hacerlo en el mismo orden en el que fueron declarados. Cada argumento enviado también va separado por comas. Si una función no recibe argumentos, simplemente no ponemos nada al interior de los paréntesis, pero SIEMPRE debemos poner los paréntesis. El valor retornado por una función puede ser asignado a una variable. Una función puede llamar a otra dentro de sí misma o incluso puede ser enviada como argumento de otra.</p>
+            
+            <h2>Ejemplos de uso de funciones</h2>
+            <p>En el siguiente código vamos a hacer un llamado a algunas de las funciones que declaramos anteriormente.</p>
+            <img src="./resources/image/imagen 4g.png" alt="">
+            <p>En el código anterior vemos cómo se asigna el valor retornado por la función a la variable 'respuesta' y finalmente, vemos cómo hemos usado el valor retornado por 'mensaje' como parámetro de la función llamada 'procedimiento'. Adicionalmente, al comienzo, vemos cómo llamar a una función que no recibe argumentos. Nota: Es importante que la definición de cada una se esas funciones haga parte de tu programa, y que esas definiciones aparezcan antes de que sean usadas. De ese modo, un código completo para tu programa, sería el siguiente:</p>
+            <p>Código completo funcional</p>
+            <img src="./resources/image/imagen 4h.png" alt="">
+            <p>Así tendrás todas las definiciones disponibles para usarlas en tu programa.</p>
+        </section>
+        <button id="realizar-quiz">Realizar Quiz</button>
+    </main>
+    <footer>
+        <p>©2024 All Rights Reserved. Design by Free Html Templates</p>
+    </footer>
+    <script src="./site.js"></script>
+</body>
+</html>

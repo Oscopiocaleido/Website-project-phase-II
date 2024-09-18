@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="resources/image/Designer.png">
+    <link rel="stylesheet" href="./style.css">
+    <title>AlgoByte</title>
+</head>
+<body>
+    <header>
+        <h1>Curso de C++ - Lección 2</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Condicional if en C++. Declaración, uso y sintaxis del if en C++</h2>
+            <p>Los condicionales if, son una estructura de control condicional, también llamadas estructuras selectivas de casos simples (porque solo definen un posible flujo), lad cuales nos permiten tomar cierta decisión al interior de nuestro algoritmo, es decir, nos permiten determinar qué </p>
+            <p>acciones ejecutar según cierta condición sea verdadera, por ejemplo determinar si un número cualquiera es mayor que 10 y de acuerdo a esto mostrar un mensaje (o cualquier acción que sea necesaria).</p>
+            <p>Básicamente, un condicional if, es una estructura que nos posibilita definir las acciones a ejecutar si se cumple cierta condición y de ese modo modificar la ejecución de tareas en un programa según se necesite.</p>
+            <h2>¿Cómo funciona un Condicional If?</h2>
+            <p>Para comprender mejor cómo funciona el condicional if, una muy buena forma es partiendo de un ejemplo. Supongamos que queremos verificar si el resultado de una suma ingresada por el usuario es correcto o no. Para este ejemplo, el condicional if, es el encargado de verificar si el </p> 
+            <p>resultado ingresado corresponde o no a la respuesta correcta de la suma. El condicional if, funciona verificando la condición ingresada y de acuerdo a su valor de verdad (falso o verdadero) lleva a cabo o no una serie de instrucciones.</p>
+            
+            <h2>Sintaxis del Condicional If en C++</h2>
+            <p>La sintaxis de un condicional if, es bastante simple e incluso creo que intuitiva. Vamos entonces a ver rápidamente como es la estructura para ir luego a unos ejemplos y quedar bien claros. Veamos:</p>
+            <img src="./resources/image/imagen 2a.png" alt="sintaxis del condicional if">
+            <p>Vamos ahora a ver línea por línea el anterior código para comprender todo y quedar claros. Posteriormente veremos un ejemplo con valores reales. Línea 1: En esta línea está prácticamente todo lo esencial del condicional, aquí le hemos dicho al interior del argumento del condicional if, cual es la condición que se debe cumplir para que se ejecute el primer bloque de instrucciones, esta línea es en efecto esencial ya que nos da la pauta para que el algoritmo determine si ejecutará o no el bloque de instrucciones al interior de las llaves.</p>
+            <p>Línea 2: En la línea 2 tenemos una llave abriendo "{" lo cual como seguramente ya sabrás indica que allí comienza el bloque de instrucciones que se ejecutarán si se cumple la condición dada. Esta llave no es del todo obligatoria, sin embargo si no la ponemos solo se ejecutara dentro de nuestro ciclo la primera línea inmediatamente posterior a la declaración del condicional, de modo que si deseamos que se ejecuten varias líneas dentro de nuestro condicional, debemos usar las llaves</p>
+            <p>Línea 3 a 7: En estas líneas es donde estarán todas las operaciones que queramos llevar a cabo en caso de cumplirse la condición, este bloque podrá tener la cantidad de líneas necesarias incluso, como veremos más adelante dentro de estas podría haber uno o más condicionales en su interior, así que podrías tener lo que se conoce como condicionales anidados (ya veremos eso más adelante).</p>
+            <p>Línea 8: En esta línea hacemos uso de la llave cerrando "}", una vez más como seguramente ya sabrás esta nos indica que allí termina el bloque del condicional y se dará por terminada la ejecución de este para continuar ejecutando el resto del programa.</p>
+            <p>Línea 9 a 11: Estas líneas contienen la estructura restante del algoritmo, quise ponerlas allí, para que quede claro que sin importar si la condición se cumple o no, el algoritmo siempre va a ejecutar estas líneas, es decir las líneas que se encuentran después de la llave de cierre de un condicional, siempre se ejecutarán sin importar si la condición se cumpla o no.</p>
+            
+            <h2>Ejemplos de Condicional If en C++</h2>
+            <p>A continuación vamos a ver unos cuantos ejemplos para comprender de manera adecuada el uso de los condicionales if en c++, recuerda que si no comprendes alguno de estos ejemplos o tienes alguna pregunta o sugerencia sobre estos o cualquier contenido de la sección, puedes dejarlas en la sección de comentarios</p>
+            <p>Ejemplo 1: Verificación de valores en C++. Vamos a retomar el ejemplo anterior, deseábamos un sistema, en el cual un usuario nos ingresaba el resultado de una suma mostrada en pantalla y verificábamos si el resultado ingresado era el correcto a esta operación. EN caso de ser correcto, el sistema muestra un mensaje de felicitación.</p>
+            <p>Solución Ejemplo 1: Debemos entonces determinar cuál va a ser nuestra condición a evaluar, en este ejemplo, la condición debe ser que la respuesta ingresada, sea igual al resultado de la suma, veamos entonces como realizar esto:</p>
+            <img src="./resources/image/imagen 2b.png" alt="ejemplo 1">
+            <p>El código funcional completo sería el siguiente:</p>
+            <img src="./resources/image/imagen 2c.png" alt="código funcional">
+        </section>
+        <section>
+            <h2>Condicional if else en C++. Declaración uso y sintaxis del if else en C++</h2>
+            <p>Los condicionales if-else, son una estructura de control, que nos permiten tomar cierta decisión al interior de nuestro algoritmo, es decir, nos permiten determinar que acciones tomar dada o no cierta condición, por ejemplo determinar si la contraseña ingresada por el usuario es válida o no y de acuerdo a esto darle acceso al sistema o mostrar un mensaje de error.</p>
+            <p>Se les conoce también como estructuras selectivas de casos dobles (porque definen ambas posibilidades en la ejecución --si se cumple y si no se cumple --). En resumen, un condicional if-else es una estructura que nos posibilita definir las acciones que se deben llevar a cabo si se cumple cierta condición y también determinar las acciones que se deben ejecutar en caso de que no se cumpla; generando así una separación o bifurcación en la ejecución del programa, ejecutando ciertas acciones u otras a partir de la evaluación de una condición dada.</p>
+            
+            <h2>¿Cómo funciona un Condicional If-Else?</h2>
+            <p>Para comprender mejor cómo funciona el condicional if-else, una muy buena forma es partiendo de un ejemplo. Imaginemos que en nuestro programa, deseamos implementar un sistema de logeo de usuario, comprobando si la información suministrada coincide con unos los valores correctos y en este caso mostrar un mensaje de bienvenida, y en caso de que no, se mostrará un mensaje de error.</p>
+            <p>Como podemos imaginar, es entonces necesario hacer que nuestro algoritmo, tome una decisión, de acuerdo a los valores ingresados por el usuario, y definir los dos casos posibles en caso de fallo o en caso de que no. Es para esto que sirve el condicional if-else, nos permite definir una condición que se debe cumplir y de acuerdo a su cumplimiento o no tomar una acción correspondiente. Espero haber sido claro, sino, no te preocupes, pues veremos ya mismo algunos ejemplos para entender todo mejor.</p>
+     
+            <h2>Sintaxis del Condicional If-Else en C++:</h2>
+            <p>La sintaxis de un condicional if-else, es en principio similar a la del condicional if, pero adicionando una nueva "estructura" que es el else, el cual indica la acción o conjunto de acciones a llevar a cabo, en caso de que la condición del if no se cumpla. Cabe resaltar que el else siempre se pone inmediatamente después del if, en caso de ser necesario, el else es incapaz de funcionar por sí solo, siempre debe ir acompañado por un if. Veamos entonces como es la sintaxis de este:</p>
+            <img src="./resources/image/imagen 2d.png" alt="sintaxis del condicinal if else">
+            <p>Vamos ahora a ver línea por línea el anterior código para comprender todo y quedar claros. Posteriormente veremos un ejemplo con valores reales. Línea 1: En esta línea está prácticamente todo lo esencial del condicional, aquí le hemos dicho al interior del argumento del condicional if, cual es la condición que se debe cumplir para que se ejecute el primer bloque de instrucciones, esta línea es en efecto esencial ya que nos da la pauta para que el algoritmo determine que bloque de instrucciones ejecutar.</p>
+            <p>Línea 2: En la línea 2 tenemos una llave abriendo "&#123;" lo cual como seguramente ya sabrás indica que allí comienza el bloque de instrucciones que se ejecutarán si se cumple la condición dada. Esta llave no es del todo obligatoria, sin embargo si no la ponemos solo se ejecutará dentro de nuestro condicional la primera línea inmediatamente posterior a la declaración del condicional, de modo que si deseamos que se ejecuten varias líneas dentro de nuestro condicional, debemos usar las llaves</p>
+            <p>Línea 3 a 7: En estas líneas es donde estarán todas las operaciones que queramos llevar a cabo en caso de cumplirse la condición, este bloque podrá tener la cantidad de líneas necesarias incluso, como veremos más adelante dentro de estas podría haber uno o más condicionales en su interior, así que podrías tener todo un condicional dentro de un condicional dentro de otro condiconal... y así sucesivamente jejeje.</p>
+            <p>Línea 8: En esta última línea hacemos uso de la llave cerrando "&#125;", una vez más como seguramente ya sabrás esta nos indica que allí termina el bloque del condicional y se dará por terminada la ejecución de este para continuar ejecutando el resto del programa, cabe notar que esta línea dará paso a la ejecución del bloque de instrucciones del else, en caso de que la condición dada no se haya cumplido.</p>
+            <p>Línea 9 a 16: Estas líneas contienen la estructura else, que es la que indica que existe un bloque de instrucciones que se debe ejecutar en caso de que la condición dada no se cumpla. Este bloque al igual que el del condicional if, se abre y se cierra con llaves, recuerda que estas pueden ser opcionales, sin embargo siempre recomiendo usarlas como una buena práctica de programación.</p>
+
+            <h2>Ejemplos de Condicional If-else en C++</h2>
+            <p>A continuación vamos a ver unos cuantos ejemplos para comprender de manera adecuada el uso de los condicionales if-else en c++, recuerda que si no comprendes alguno de estos ejemplos o tienes alguna pregunta o sugerencia sobre estos o cualquier contenido de la sección, puedes dejarlas en la sección de comentarios</p>
+            <p>Ejemplo 1: Sistema de logeo en C++. Vamos a retomar el ejemplo anterior, deseamos implementar un sistema de logeo de usuario, es decir, queremos que el usuario nos ingrese un una contraseña y deseamos comprobar si coincide con el valor pre establecido. En caso de que los datos sean correctos se mostrará un mensaje de bienvenida, y en caso de que no, se mostrara un mensaje de error y finalizará el programa.</p>
+            <p>Solución Ejemplo 1: Debemos entonces determinar cuál va a ser nuestra condición a evaluar, en este ejemplo, la condición debe ser que la contraseña, sea idéntica a la establecida en nuestro sistema, veamos entonces como realizar esto:</p>
+            <img src="./resources/image/imagen 2e.png" alt="ejemplo 1">
+            <p>El código funcional completo sería el siguiente:</p>
+            <img src="./resources/image/imagen 2f.png" alt="código completo">
+        </section>
+        <section>
+            <h2>Condicional switch en C++. Declaración uso y sintaxis de switch en C++</h2>
+            <h3>¿Qué es Condicional Switch?</h3>
+            <p>Los condicionales Switch, son una estructura de control condicional, que permite definir múltiples casos que puede llegar a cumplir una variable cualquiera, y qué acción tomar en cualquiera de estas situaciones, incluso es posible determinar qué acción llevar a cabo en caso de no cumplir ninguna de las condiciones dadas.</p>
+            
+            <h2>¿Cómo funciona el Switch?</h2>
+            <p>La mejor forma de entender el funcionamiento de algo, es viendo un ejemplo de esto, de este modo, me parece que para comprender de forma adecuada como funciona un condicional Switch, es bueno hacerlo poniendo un ejemplo. Imaginemos entonces que nuestro programa consta de un menú de opciones digamos 3 opciones, cada una representada con un número correspondiente, es decir la opción uno corresponde al número 1, la dos al 2 y así sucesivamente, queremos entonces que de acuerdo a un número ingresado por el usuario ejecutemos una acción correspondiente y en caso de que no corresponda a ninguna de las posibles opciones, mostrar un mensaje de error cualquiera.</p>
+            <p>De este modo, podemos identificar 3 casos distintos para nuestro switch o en otras palabras, hemos identificado tres condiciones posibles que puede llegar a cumplir nuestra variable: el caso uno corresponde a que el valor ingresado por el usuario sea el 1, es decir ejecutar la opción 1, el caso 2 el número 2, etc.</p>
+            <p>adicionalmente hemos encontrado la opción que se ejecutará por defecto en caso de no suceder ninguno de estos casos, es decir si el usuario ingresa por ejemplo 10, mostraremos un mensaje de error cualquiera.</p>
+            <p>Espero que haya sido un tanto claro con esto, si no es así, recuerda que puedes preguntar en la sección de comentarios y con gusto te voy a responder o incluso modificar esta sección para responder tu cuestión, de igual forma, vamos a ver ya mismo unos ejemplos para entender mucho mejor de lo que he estado hablando.</p>
+           
+            <h2>Sintaxis del Condicional Switch en C++:</h2>
+            <p>La sintaxis de un condicional Switch es bastante distinta a la de un condicional típico, sin embargo es bastante intuitiva y fácil de comprender, es solo cuestión de acostumbrarse. Veamos a continuación la estructura general de un condicional Switch y luego unos cuantos ejemplos.</p>
+            <img src="./resources/image/imagen 2g.png" alt="sintaxis del condicinal switch">
+            <p>Vamos ahora a ver línea por línea el anterior código para comprender todo y quedar claros. Posteriormente veremos un ejemplo con valores reales. Línea 1: Aquí, tenemos la declaración del condicional switch, estamos diciendo que lo que viene a continuación es esto, entre los paréntesis, el switch recibe la variable que vamos a usar para comparar en cada uno de los casos.</p>
+            <p>Línea 2: En la línea 2 tenemos una llave abriendo "&#123;" lo cual como hemos visto en secciones anteriores, indica que allí comienzan los bloques de instrucciones que se ejecutarán para cada caso.</p>
+            <p>Línea 3: En esta línea tenemos una parte vital del condicional switch, aquí tenemos definido un caso posible que puede cumplir nuestra variable, la sintaxis es simple, usamos la instrucción "case" para indicar que allí comienza un caso, luego indicamos el valor que puede tomar la variable, puede ser un numero, una cadena de caracteres o lo que necesitemos, de esto se siguen dos puntos ":" y después de estos ponemos la o las instrucciones a ejecutar para este caso, como ejemplo, podríamos tener algo como esto : case "Hola": cout << "Usted ha escrito Hola";.</p>
+            <p>Línea 4: Esta línea contiene la instrucción break, es una instrucción simple, pero fundamental al interior del condicional Switch, esta instrucción indica que hasta allí va el bloque de instrucciones del caso inmediatamente anterior a este, de este modo evitamos que el algoritmo ejecute los demás casos, a modo de ejercicio, podrías intentar ejecutar el código del ejemplo que veremos más adelante y quitar las instrucciones break, con esto podrás comprobar que si el usuario ingresa por ejemplo un 1, se ejecutarán todos los casos, es por esto que el break es fundamental.</p>
+            <p>Línea 5 a 8: Estas líneas contienen una repetición de las instrucciones de las líneas 3 y 4, evidentemente cada una contiene un caso distinto, ten en cuenta que se pueden definir todos los casos que sean necesarios al interior del switch.</p>
+            <p>Líneas 9, 10 y 11: Estas líneas como deberías saber ya, contienen diferentes comentarios aclarativos sobre el código, en caso de que no comprendas adecuadamente estas líneas, te recomiendo visitar la sección de comentarios.</p>
+            <p>Línea 12: Esta línea cambia un poco con respecto a las anteriores, sin embargo conserva la misma esencia, en vez de poner el comando "case", usamos el comando "default", y luego los 2 puntos ":", notemos que no se pone ningún valor a evaluar, pues esta es la acción que se ejecuta en caso de que no lleguemos a entrar en ninguno de los casos.</p>
+            <p>Línea 13: En esta línea hacemos uso de la llave cerrando "&#125;", una vez más como seguramente ya sabrás esta nos indica que allí termina el bloque del condicional y se dará por terminada la ejecución de este para continuar ejecutando el resto del programa.</p>
+        
+            <h2>Ejemplos de Condicional Switch en C++</h2>
+            <p>A continuación vamos a ver unos cuantos ejemplos para comprender de manera adecuada el uso de los condicionales Switch en C++, recuerda que si no comprendes alguno de estos ejemplos o tienes alguna pregunta o sugerencia sobre estos o cualquier contenido de la sección, puedes dejarlas en la sección de comentarios</p>
+            <p>Ejemplo 1: Menú de opciones en C++. Vamos a retomar el ejemplo mencionado anteriormente al inicio de la sección, en el cual suponíamos que el usuario nos ingresaba un número correspondiente a una opción cualquiera y de acuerdo a esto mostramos un mensaje y en caso de ingresar una opción incorrecta, mostramos un mensaje de error.</p>
+            <p>Solución Ejemplo 1: Primero, determinemos los casos a ejecutar, tenemos tres casos posibles (suponiendo que nuestro menú está compuesto por 3 opciones) el caso 1 para la opción 1, el dos para la 2 y así sucesivamente. Nuestro caso por defecto (default) sería el caso de error, que sucede cuando no se ingresa alguna de las 3 opciones. Veamos entonces como hacer esto:</p>
+            <img src="./resources/image/imagen 2h.png" alt="ejemplo 1">
+            <p>El código funcional completo sería el siguiente:</p>
+            <img src="./resources/image/imagen 2i.png" alt="codigo completo">
+            <p>Ejemplo 2: Menú de opciones en C++, usando char. Vamos a retomar el ejemplo anterior, pero en esta ocasión vamos a usar caracteres (char) de C++, para determinar las opciones ingresadas por el usuario.</p>
+            <p>Solución Ejemplo 2, usando char:</p>
+            <p>Veamos entonces como hacer esto:</p>
+            <img src="./resources/image/imagen 2j.png" alt="ejemplo 2">
+            <p>El código funcional completo sería el siguiente:</p>
+            <img src="./resources/image/imagen 2k.png" alt="codigo completo">
+            <p>Eso es todo. Como ves, en esencia es el mismo código, pero debes asegurarte de poner las diferentes opciones entre comillas simples ('), puesto que la comparación es entre caracteres.</p>
+        </section>
+        <section>
+            <h2>Detalles sobre el condicional switch en C++</h2>
+            <p>En C++, NO puedes usar otra cosa diferente a número en cada case. Si necesitas comparar cadenas de texto u otros tipos de datos, seguramente un condicional como el if o if-else sean una mejor alternativa</p>
+            <p>Los caracteres también se pueden usar, pues en esencia se pueden representar como números enteros (el lenguaje se encarga de eso por ti). Sin embargo, como indiqué, otros tipos de datos no son recomendables</p>
+            <p>La sentencia default es opcional, así que si no lo deseas no la debes poner. Sin embargo, es recomendable hacerlo, para así controlar todas las opciones posibles y que tu programa no quede a la "suerte" en ciertos casos.</p>
+            <p>Dentro de cada case eres libre de poner varias líneas de código, incluso otras estructuras como condicionales o ciclos. Sin embargo, es preferible mantener tu código ordenado y no poner muchas. Recomendaría no poner más de 5 y preferiblemente solo una. Si deseas hacer tareas complejas al interior de un case de un switch en C++, posiblemente sea mejor hacer esas tareas en una función y llamar a esa función desde el case o simplemente usar un if-else.</p>
+            <p>Así que, efectivamente, los condicionales switch y de hecho todos los condicionales en sí, son extremadamente útiles pues permiten definirle a nuestro software múltiples vías de ejecución contemplando así todas las posibilidades durante la ejecución. Me gustaría hacer una leve aclaración, el condicional switch encuentra su utilidad al momento de tener más de una posibilidad de valores para una variable cualquiera, evidentemente si nuestra variable solo puede adquirir un valor útil para nosotros, nuestra alternativa inmediata debería ser un if o un if-else, no un switch que resulta un poco mas engorroso de escribir, sin embargo cuando tenemos varias posibilidades es mejor un switch que tener condicionales anidados o un condicional después de otro. Espero que todo te haya quedado claro en esta sección.</p>
+        </section>
+        <button id="realizar-quiz">Realizar Quiz</button>
+    </main>
+    <footer>
+        <p>©2024 All Rights Reserved. Design by Free Html Templates</p>
+    </footer>
+    <script src="./site.js"></script
+</body>
+</html>

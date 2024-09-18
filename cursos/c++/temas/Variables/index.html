@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="resources/image/Designer.png">
+    <title>AlgoByte</title>
+    <link rel="stylesheet" href="./style.css"> </head>
+<body>
+    <header>
+        <h1>Curso de C++ - Lección 1</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Las Variables</h2>
+            <p>Las variables son altamente imprescindibles al momento de programar, de hecho sería imposible conseguir una aplicación con una funcionalidad básica sin usar variables; por esta misma razón es necesario aprender a usarlas bien y lo tenemos muy fácil, pues su uso es bastante sencillo e intuitivo, tanto para declararlas como para asignarles valores.</p>
+            <p>Las variables son posiciones en memoria donde estarán guardados los diferentes valores que le damos o que toman duranet ejecución los datos que usamos y normalmente estarán disponibles a lo largo de la ejecución de nuestro programa. Para asignar valores a una variable en una gran variedad de lenguajes que incluye a C++ se usa el operador "=" seguido del valor que le daremos a la variable (no todos usan el "=" para esto). Veamos un ejemplo completo con todos los posibles usos que le damos a una variable.</p>
+            <img src="./resources/image/imagen 1a.png" alt="Ejemplo de variables en C++">
+            <p>En el código anterior hemos visto las multiples formas en que se puede declarar una variable, cómo asignarle un valor, incluso vimos que es posible asignarle el valor de una variable a otra, o realizar operaciones entre los valores de variables y asignar el resultado a una variable nueva, vimos que es posible usar el valor de una misma variable y cambiar su propio valor (res = res*2).</p>
+        </section>
+        <section>
+            <h2>Las Constantes</h2>
+            <p>Las datos constantes, mal llamadas por algunos "variables constantes" (realmente no son variables) tienen un valor fijo durante toda la ejecución del programa, es decir, este valor no cambia ni puede ser cambiado a lo largo de la ejecución de nuestro programa. Las constantes son muy útiles para especificar el tamaño de un vector y para algunas otras cosas, como facilidad de uso y confiabilidad del código. Para declarar una constante, se hace despues de declarar las librerías y antes de las funciones, la sintaxis es la siguiente: #define nombre_constante valor. Veamos algunos detalles y luego unos ejemplos sencillos del uso de las constantes en C++</p>
+            <h3>Uso de #define</h3>
+            <p>La instrucción #define nos permite declarar constantes (y algunas cosas más) de una manera rápida y sencilla. Hay que tener en cuenta que al declarar constantes con #define debemos hacerlo despues de los #include para importar librerías pero antes de declarar nuestras funciones y demás. Veamos un ejemplo:</p>
+            <img src="./resources/image/imagen 1b.png" alt="Ejemplo de uso de #define en C++">
+            <p>Notemos que ha sido bastante fácil, sin embargo no todo es bueno. Realmente al usar la instrucción #define en C++ no estámos creando una constante realmente, estamos creando una expresión y por tal motivo hay algunas cosas que se complican, veamos:</p>
+            <img src="./resources/image/imagen 1c.png" alt="Ejemplo de problema con #define en C++">
+            <p>Si intentamos ejecutar el código anterior obtendremos un error al haber usado el operador << justo despues de PI, esto sucede porque PI no es tratado exactamente como una variable cualquiera sino como una expresión, así que realmente aunque podemos usar #define para declarar constantes no es la mejor opción.</p>
+            <h3>Uso de const</h3>
+            <p>La instrucción const nos permite declarar constantes de una manera más adecuada y acorde. Las constantes declaradas con const poseen un tipo de dato asociado (como debería ser siempre) y se declaran al interior de nuestro código como un tipo cualquiera. Veamos un ejemplo:</p>
+            <img src="./resources/image/imagen 1d.png" alt="Ejemplo de uso de const en C++">
+            <p>Notemos que de igual forma ha sido bastante fácil y mejor aún ha sido mucho más intuitivo y sencillo para nosotros. Se puede ver que la declaración es muy similar a la de una variable cualquiera y que ya no tenemos complicaciones al intentar añadir la instrucción endl para agregar el salto de línea. Veamos que realmente la variable no puede cambiar:</p>
+            <p>Si intentamos ejecutar el código anterior obtendremos un error al intentar cambiarle el valor a PI, pues lo hemos definido como una constante y el lenguaje no nos permitirá cambiarle en ningún momento el valor</p>
+        </section>
+        <section>
+            <h2>¿Cuándo usar una variable o una constante?</h2>
+            <p>En general, la definición de variable y constante nos da una muy buena idea de cuándo usar una u otra. Básicamente, si un valor puede cambiar en cualquier momento (aunque la probabilidad de que eso suceda sea baja) entonces deberá ser una variable, en lugar de una constante.</p>
+            <p>Un ejemplo para soportar lo anterior sería el nombre del usuario. Podríamos pensar que un nombre no va a cambiar, y es probable que no lo haga. Sin embargo nada nos asegura que así sea, pues aunque es improbable es posible. Adicionalmente, nuestro programa puede cambiar de usuario y por ende su nombre podría variar mientras el programa se ejecuta. Por lo tanto NO debería ser una constante.</p>
+            <p>Por otro lado, hay valores que no van a cambiar a lo largo del tiempo. Por ejemplo, la velocidad de la luz se ha acordado siempre como la misma, así que debería ser una constante para evitar que sea cambiada de cualquier modo durante la ejecución del programa. Valores como el número PI, el código de estado de una página no existente (404), son valores que son convenciones existentes y que NO deberían cambiar, por lo cual se los declara como constantes.</p>
+            <p>Finalmente, el uso de constantes en C++ (y en cualquier otro lenguaje de programación) ayuda mucho a mejorar la comprensión del código que escribimos pues no es lo mismo que nuestro código ponga:</p>
+            <img src="./resources/image/imagen 1e.png" alt="Ejemplo de código sin usar constante">
+            <p>A que diga</p>
+            <img src="./resources/image/imagen 1f.png" alt="Ejemplo de código usando constante">
+            <p>Pues en el segundo caso, queda muy claro que estamos asignando el valor de velocidad con el de la luz, que es una constante. Por supuesto, anteriormente tendríamos que haber declarado la constante VELOCIDAD_LUZ con su respectivo valor (tal como se explicó anteriormente).</p>
+        </section>
+        <button id="realizar-quiz">Realizar Quiz</button>
+    </main>
+    <footer>
+        <p>©2024 All Rights Reserved. Design by Free Html Templates</p>
+    </footer>
+    <script src="./site.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="resources/image/Designer.png">
+    <title>AlgoByte</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Quiz 2: Condicionales if, if-else, switch</h1>
+        <p>Tienes 5 minutos para completar este quiz.</p>
+        <p id="tiempo-restante">Tiempo restante: 5 minutos y 0 segundos</p>      
+    </header>
+    <main>
+        <section>
+            <form id="quizForm" onsubmit="return verificarRespuestas()">
+            <h2>Indique si las siguientes afirmaciones son verdaderas o falsas:</h2>
+            <ul>
+                <li>
+                    <h3> a. La estructura if-else es utilizada para tomar decisiones en función de una condición.</h3>
+                    <input type="radio" name="q1" value="v" class="verdaderoFalso"> Verdadero <br/> 
+                    <input type="radio" name="q1" value="f" class="verdaderoFalso"> Falso <br/>
+                </li>
+                <li>
+                    <h3> b. El operador ternario (?:) es una forma abreviada de la estructura if-else.</h3>
+                    <input type="radio" name="q2" value="v" class="verdaderoFalso"> Verdadero <br/> 
+                    <input type="radio" name="q2" value="f" class="verdaderoFalso"> Falso <br/>
+                </li>
+                <li>
+                    <h3> c. El operador lógico && representa la operación "o".</h3>
+                    <input type="radio" name="q3" value="v" class="verdaderoFalso"> Verdadero <br/> 
+                    <input type="radio" name="q3" value="f" class="verdaderoFalso"> Falso <br/>
+                </li>
+                <li>
+                    <h3> d. La estructura switch es utilizada para tomar diferentes flujos en el programa en función a una comparación del tipo relacional.</h3>
+                    <input type="radio" name="q4" value="v" class="verdaderoFalso"> Verdadero <br/> 
+                    <input type="radio" name="q4" value="f" class="verdaderoFalso"> Falso <br/>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Seleccione la opción correcta para cada enunciado:</h2>
+            <ul>
+                <li>
+                    <h3>a. ¿Cuál es el operador lógico para "y" en C++? </h3>
+                    <input type="radio" name="q5" value="a" class="seleccionSimple"> &&<br/>
+                    <input type="radio" name="q5" value="b" class="seleccionSimple"> ||<br/>
+                    <input type="radio" name="q5" value="c" class="seleccionSimple"> !<br/>
+                </li>
+                <li>
+                    <h3>b. ¿Cuál es la palabra clave para iniciar un bloque de código dentro de una estructura if?</h3>
+                    <input type="radio" name="q6" value="a" class="seleccionSimple"> then<br/>
+                    <input type="radio" name="q6" value="b" class="seleccionSimple">begin<br/>
+                    <input type="radio" name="q6" value="c" class="seleccionSimple">{<br/>
+                </li>
+                <li>
+                    <h3>c. ¿Cuál es la estructura de control que se utiliza para ejecutar un bloque de código mientras una condición se cumpla? </h3>
+                    <input type="radio" name="q7" value="a" class="seleccionSimple">if<br/>
+                    <input type="radio" name="q7" value="b" class="seleccionSimple">while<br/>
+                    <input type="radio" name="q7" value="c" class="seleccionSimple">for<br/>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Seleccione una o más opciones que se ajusten al enunciado:</h2>
+            <ul>
+                <li>
+                    <h3>a. ¿Cuáles de los siguientes operadores relacionales son válidos? </h3>
+                        <input type="checkbox" name="q8" value="a1" class="seleccionMultiple"> ++<br/>
+                        <input type="checkbox" name="q8" value="b1" class="seleccionMultiple"> !=<br/>
+                        <input type="checkbox" name="q8" value="c1" class="seleccionMultiple"> ><br/>
+                </li>
+                <li>
+                    <h3>b.¿Cuáles de las siguientes estructuras de control se utilizan para tomar decisiones?</h3> 
+                        <input type="checkbox" name="q9" value="a2" class="seleccionMultiple"> if<br/>
+                        <input type="checkbox" name="q9" value="b2" class="seleccionMultiple"> else<br/>
+                        <input type="checkbox" name="q9" value="c2" class="seleccionMultiple"> for<br/>
+                </li>
+                <li>
+                    <h3>c.¿Cuáles de las siguientes estructuras de control requieren una comparación para funcionar?</h3>
+                    <input type="checkbox" name="q10" value="a3" class="seleccionMultiple"> switch<br/>
+                    <input type="checkbox" name="q10" value="b3" class="seleccionMultiple"> for<br/>
+                    <input type="checkbox" name="q10" value="c3" class="seleccionMultiple"> if-else<br/>
+                </li>
+            </ul>
+        </section>
+        <div id="resultado"></div>
+        <button type="submit" id="submit-quiz">Finalizar Quiz</button>
+        <p id="puntuacion"></p>
+    </form>
+    </main>
+    <script src="./site.js"></script>
+</body>
+</body>
+</html>

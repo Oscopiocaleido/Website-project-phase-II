@@ -1,0 +1,164 @@
+/*Main*/
+:root{
+    --primary-color:#7a8eb0;
+    --secondary-color: #abc4df;
+    --tertiary-color: #daeaf2;
+    --bg-color: #f9faf4;
+}
+  
+*{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+}
+  
+/*-------------------------------------------------------*/
+/*Fonts settings*/
+  
+@font-face {
+      font-family: blogger_sans;
+      src: url(./resources/fonts/Blogger/BloggerSans.ttf);
+  
+}
+  
+@font-face {
+      font-family: blogger_light;
+      src: url(./resources/fonts/Blogger/BloggerSans-Light.ttf);
+}
+  
+ @font-face {
+      font-family: blogger_bold;
+      src: url(./resources/fonts/Blogger/BloggerSans-Bold.ttf);
+}
+  
+@font-face {
+      font-family: blogger_medium;
+      src: url(./resources/fonts/Blogger/BloggerSans-Medium.ttf);
+ }
+/*-------------------------------------------------------*/
+/*Body Settings*/
+body{
+    background-color: var(--bg-color);
+    font-family: blogger_light, sans-serif;
+}
+/*-------------------------------------------------------*/
+/*Header Settings*/
+header{
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: blogger_sans;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+header h1{
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+header p{
+    font-size: 1.2em;
+    margin: 0;
+}
+/*-------------------------------------------------------*/
+/*Main Settings*/
+main{
+    padding: 20px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+main section{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+main section h2{
+    font-family: blogger_medium;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+main section ul{
+    list-style: none;
+    padding: 0;
+}
+main section ul li{
+    margin-bottom: 10px;
+}
+main section input[type="checkbox"], 
+main section select{
+    margin-left: 10px;
+}
+/*-------------------------------------------------------*/
+/*Buttons Settings*/
+button{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: blogger_medium;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+button:hover{
+    opacity: 0.8;
+}
+/*-------------------------------------------------------*/
+/*Form Settings*/
+#quiz-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+select option {
+    background-color: #f2f2f2; 
+    color: #333; 
+    padding: 8px 16px; 
+    font-family: blogger_sans; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease;
+    position: relative; 
+}
+  
+select option:hover {
+    background-color: #e0e0e0; 
+    cursor: pointer; 
+}
+
+select option:checked {
+    background-color: #ddd; 
+    font-weight: bold; 
+}
+
+select option[multiple]:checked {
+    background-color: #ddd; 
+    font-weight: bold; 
+}
+
+select option::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #ccc; 
+    border-radius: 50%; 
+}
+  
+select option:hover::before {
+    background-color: #999; 
+  }
+  
+select option:checked::before {
+    background-color: #666; 
+  }
+

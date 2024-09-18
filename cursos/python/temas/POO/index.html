@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="resources/image/Designer.png">
+    <title>AlgoByte</title>
+    <link rel="stylesheet" href="./style.css"> </head>
+<body>
+    <header>
+        <h1>Curso de Python - Lección 6</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Programación orientada a objetos (POO) en Python</h2>
+            <p>En Python todo es un objeto. Cuando creas una variable y le asignas un valor entero, ese valor es un objeto; una función es un objeto; las listas, tuplas, diccionarios, conjuntos, … son objetos; una cadena de caracteres es un objeto. Y así podría seguir indefinidamente.</p>
+            <p>Pero, ¿por qué es tan importante la programación orientada a objetos? Bien, este tipo de programación introduce un nuevo paradigma que nos permite encapsular y aislar datos y operaciones que se pueden realizar sobre dichos datos.</p>
+
+            <h2>Clases y objetos en Python</h2>
+            <p>Básicamente, una clase es una entidad que define una serie de elementos que determinan un estado (datos) y un comportamiento (operaciones sobre los datos que modifican su estado).</p>
+            <p>Por su parte, un objeto es una concreción o instancia de una clase.</p>
+            <p>Tranqui, que lo vas a entender con el siguiente ejemplo.</p>
+            <p>Seguro que si te digo que te imagines un coche, en tu mente comienzas a visualizar la carrocería, el color, las ruedas, el volante, si es diésel o gasolina, el color de la tapicería, si es manual o automático, si acelera o va marcha atrás, etc.</p>
+            <p>Pues todo lo que acabo de describir viene a ser una clase y cada uno de los de coches que has imaginado, serían objetos de dicha clase.</p>
+
+            <h2>¿Cómo pasamos lo anterior a Python? Veámoslo.</h2>
+            <p>Como te decía, una clase engloba datos y funcionalidad. Cada vez que se define una clase en Python, se crea a su vez un tipo nuevo (¿recuerdas? tipo int, float, str, list, tuple, … todos ellos están definidos en una clase).</p>
+            <p>Para definir una clase en Python se utiliza la palabra reservada class. El siguiente esquema visualiza los elementos principales que componen una clase. Todos ellos los iremos viendo con detenimiento en las siguientes secciones:</p>
+            <img src="./resources/image/imagen 6a.png" alt="">
+            <p>El esquema anterior define la clase Coche (es una versión muy, muy simplificada de lo que es un coche, jajaja, pero nos sirve de ejemplo). Dicha clase establece una serie datos, como ruedas, color, aceleración o velocidad y las operaciones acelera() y frena().</p>
+            <p>Cuando se crea una variable de tipo Coche, realmente se está instanciando un objeto de dicha clase. En el siguiente ejemplo se crean dos objetos de tipo Coche:</p>
+            <img src="./resources/image/imagen 6b.png" alt="">
+            <p>c1 y c2 son objetos, objetos cuya clase es Coche. Ambos objetos pueden acelerar y frenar, porque su clase define estas operaciones y tienen un color, porque la clase Coche también define este dato. Lo que ocurre es que c1 es de color rojo, mientras que c2 es de color azul.</p>
+            <p>¿Ves ya la diferencia?</p>
+            <p>NOTA: Es una convención utilizar la notación CamelCase para los nombres de las clases. Esto es, la primera letra de cada palabra del nombre está en mayúsculas y el resto de letras se mantienen en minúsculas.</p>
+
+            <h2>Constructor de una clase en Python</h2>
+            <p>En la sección anterior me he adelantado un poco… Para crear un objeto de una clase determinada, es decir, instanciar una clase, se usa el nombre de la clase y a continuación se añaden paréntesis (como si se llamara a una función).</p>
+            <img src="./resources/image/imagen 6c.png" alt="">
+            <p>El código anterior crea una nueva instancia de la clase MiClase y asigna dicho objeto a la variable obj. Esto crea un objeto vacío, sin estado.</p>
+            <p>Sin embargo, hay clases (como nuestra clase Coche) que deben o necesitan crear instancias de objetos con un estado inicial.</p>
+            <p>Esto se consigue implementando el método especial __init__(). Este método es conocido como el constructor de la clase y se invoca cada vez que se instancia un nuevo objeto. El método __init__() establece un primer parámetro especial que se suele llamar self (veremos qué significa este nombre en la siguiente sección). Pero puede especificar otros parámetros siguiendo las mismas reglas que cualquier otra función.</p>
+            <p>En nuestro caso, el constructor de la clase coche es el siguiente:</p>
+            <img src="./resources/image/imagen 6d.png" alt="">
+            <p>Como puedes observar, además del parámetro self, define los parámetros color y aceleracion, que determinan el estado inicial de un objeto de tipo Coche.</p>
+            <p>En este caso, para instanciar un objeto de tipo coche, debemos pasar como argumentos el color y la aceleración como vimos en el ejemplo:</p>
+            
+            <h2>Atributos, atributos de datos y métodos</h2>
+            <p>Una vez que sabemos qué es un objeto, tengo que decirte que la única operación que pueden realizar los objetos es referenciar a sus atributos por medio del operador.
+            </p>
+            <p>Como habrás podido apreciar, un objeto tiene dos tipos de atributos: atributos de datos y métodos.
+            </p>
+            <p>Los atributos de datos definen el estado del objeto. En otros lenguajes son conocidos simplemente como atributos o miembros. Los métodos son las funciones definidas dentro de la clase. Siguiendo con nuestro ejemplo de la clase Coche, vamos a crear el siguiente objeto:
+            </p>
+            <img src="./resources/image/imagen 6e.png" alt="">
+            <p>En la línea 2 del código anterior, el objeto c1 está referenciando al atributo de dato color y en la línea 4 al atributo velocidad. Sin embargo, en la línea 6 se referencia al método acelera(). Llamar a este método tiene una implicación como puedes observar y es que modifica el estado del objeto, dado que se incrementa su velocidad. Este hecho lo puedes apreciar cuando se vuelve a referenciar al atributo velocidad en la línea 7.
+            </p>
+
+            <h2>Atributos de datos</h2>
+            <p>A diferencia de otros lenguajes, los atributos de datos no necesitan ser declarados previamente. Un objeto los crea del mismo modo en que se crean las variables en Python, es decir, cuando les asigna un valor por primera vez.</p>
+            <p>El siguiente código es un ejemplo de ello:</p>
+            <img src="./resources/image/imagen 6f.png" alt="">
+            <p>Los objetos c1 y c2 pueden referenciar al atributo color porque está definido en la clase Coche. Sin embargo, solo el objeto c1 puede referenciar al atributo marchas a partir de la línea 7, porque inicializa dicho atributo en esa línea. Si el objeto c2 intenta referenciar al mismo atributo, como no está definido en la clase y tampoco lo ha inicializado, el intérprete lanzará un error.</p>
+
+            <h2>Métodos</h2>
+            <p>Como te explicaba al comienzo de esta sección, los métodos son las funciones que se definen dentro de una clase y que, por consiguiente, pueden ser referenciadas por los objetos de dicha clase. Sin embargo, realmente los métodos son algo más.</p>
+            <p>Si te has fijado bien, pero bien de verdad, habrás observado que las funciones acelera() y frena() definen un parámetro self.</p>
+            <img src="./resources/image/imagen 6g.png" alt="">
+            <p>No obstante, cuando se usan dichas funciones no se pasa ningún argumento. ¿Qué está pasando? Pues que acelera() está siendo utilizada como un método por los objetos de la clase Coche, de tal manera que cuando un objeto referencia a dicha función, realmente pasa su propia referencia como primer parámetro de la función.</p>
+            <p>NOTA: Por convención, se utiliza la palabra self para referenciar a la instancia actual en los métodos de una clase.</p>
+            <p>Sabiendo esto, podemos entender, por ejemplo, por qué todos los objetos de tipo Coche pueden referenciar a los atributos de datos velocidad o color. Son inicializados para cada objeto en el método __init__().</p>
+            <p>Del mismo modo, el siguiente ejemplo muestra dos formas diferentes y equivalentes de llamar al método acelera():</p>
+            <img src="./resources/image/imagen 6h.png" alt="">
+            <p>Para la clase Coche, acelera() es una función. Sin embargo, para los objetos de la clase Coche, acelera() es un método.
+            </p>
+            <img src="./resources/image/imagen 6i.png" alt="">
+
+            <h2>Atributos de clase y atributos de instancia</h2>
+            <p>Una clase puede definir dos tipos diferentes de atributos de datos: atributos de clase y atributos de instancia.</p>
+            <p>Los atributos de clase son atributos compartidos por todas las instancias de esa clase.
+                Los atributos de instancia, por el contrario, son únicos para cada uno de los objetos pertenecientes a dicha clase.
+                En el ejemplo de la clase Coche, ruedas se ha definido como un atributo de clase, mientras que color, aceleracion y velocidad son atributos de instancia.</p>
+            <p>Para referenciar a un atributo de clase se utiliza, generalmente, el nombre de la clase. Al modificar un atributo de este tipo, los cambios se verán reflejados en todas y cada una las instancias.</p>
+            <img src="./resources/image/imagen 6j.png" alt="">
+            <p>Si un objeto modifica un atributo de clase, lo que realmente hace es crear un atributo de instancia con el mismo nombre que el atributo de clase.</p>
+            <img src="./resources/image/imagen 6k.png" alt="">
+        </section>
+        <section>
+            <h2>Herencia en Python</h2>
+            <p>En programación orientada a objetos, la herencia es la capacidad de reutilizar una clase extendiendo su funcionalidad. Una clase que hereda de otra puede añadir nuevos atributos, ocultarlos, añadir nuevos métodos o redefinirlos.</p>
+            <p>En Python, podemos indicar que una clase hereda de otra de la siguiente manera:</p>
+            <img src="./resources/image/imagen 6l.png" alt="">
+            <p>Como puedes observar, la clase CocheVolador hereda de la clase Coche. En Python, el nombre de la clase padre se indica entre paréntesis a continuación del nombre de la clase hija.</p>
+            <p>La clase CocheVolador redefine el atributo de clase ruedas, estableciendo su valor a 6 e implementa dos métodos nuevos: vuela() y aterriza().</p>
+            <p>Fíjate ahora en la primera línea del método __init__(). En ella aparece la función super(). Esta función devuelve un objeto temporal de la superclase que permite invocar a los métodos definidos en la misma. Lo que está ocurriendo es que se está redefiniendo el método __init__() de la clase hija usando la funcionalidad del método de la clase padre. Como la clase Coche es la que define los atributos color y aceleracion, estos se pasan al constructor de la clase padre y, a continuación, se crea el atributo de instancia esta_volando solo para objetos de la clase CocheVolador.</p>
+            <p>Al utilizar la herencia, todos los atributos (atributos de datos y métodos) de la clase padre también pueden ser referenciados por objetos de las clases hijas. Al revés no ocurre lo mismo.</p>
+            <p>Veamos todo esto con un ejemplo:</p>
+            <img src="./resources/image/imagen 6m.png" alt="">
+
+            <h2>Las funciones isinstance() e issubclass()</h2>
+            <p>Como ya vimos en otros tutoriales, la función incorporada type() devuelve el tipo o la clase a la que pertenece un objeto. En nuestro caso, si ejecutamos type() pasando como argumento un objeto de clase Coche o un objeto de clase CocheVolador obtendremos lo siguiente:</p>
+            <img src="./resources/image/imagen 6n.png" alt="">
+            <p>Sin embargo, Python incorpora otras dos funciones que pueden ser de utilidad cuando se quiere conocer el tipo de una clase. Son: isinstance() e issubclass().</p>
+            <p>isinstance(objeto, clase) devuelve True si objeto es de la clase clase o de una de sus clases hijas. Por tanto, un objeto de la clase CocheVolador es instancia de CocheVolador pero también lo es de Coche. Sin embargo, un objeto de la clase Coche nunca será instancia de la clase CocheVolador.
+               issubclass(clase, claseinfo) comprueba la herencia de clases. Devuelve True en caso de que clase sea una subclase de claseinfo, False en caso contrario. claseinfo puede ser una clase o una tupla de clases.</p>
+            <img src="./resources/image/imagen 6o.png" alt="">
+
+            <h2>Herencia múltiple en Python</h2>
+            <p>Python es un lenguaje de programación que permite herencia múltiple. Esto quiere decir que una clase puede heredar de más de una clase a la vez.</p>
+            <img src="./resources/image/imagen 6q.png" alt="">
+            <p>El script anterior dará como resultado a b c</p>
+            <p>Encapsulación: atributos privados
+               Encapsulación (o encapsulamiento), en programación orientada a objetos, hace referencia a la capacidad que tiene un objeto de ocultar su estado, de manera que sus datos solo se puedan modificar por medio de las operaciones (métodos) que ofrece.</p>
+            <p>Si vienes de otros lenguajes de programación, quizá te haya resultado raro que no haya mencionado nada sobre atributos públicos o privados.</p> 
+            <p>Bien, por defecto, en Python, todos los atributos de una clase (atributos de datos y métodos) son públicos. Esto quiere decir que desde un código que use la clase, se puede acceder a todos los atributos y métodos de dicha clase.
+            </p>
+            <p>No obstante, hay una forma de indicar en Python que un atributo, ya sea un dato o un método, es interno a una clase y no se debería utilizar fuera de ella. Algo así como los miembros privados de otros lenguajes. Esto es usando el carácter guión bajo _atributo antes del nombre del atributo que queramos ocultar.
+            </p>
+            <p>En cualquier caso, el atributo seguirá siendo accesible desde fuera de la clase, pero el programador está indicando que es privado y no debería utilizarse porque no se sabe qué consecuencias puede tener.</p>
+            <p>También es posible usar un doble guión bajo __atributo. Esto hace que el identificador sea literalmente reemplazado por el texto _Clase__atributo, donde Clase es el nombre de la clase actual.</p>
+            <p>Un ejemplo nunca está de más.</p>
+            <img src="./resources/image/imagen 6q.png" alt="">
+            <p>En el ejemplo anterior, la clase A define el atributo privado _contador. Un ejemplo de uso de la clase sería el siguiente:</p>
+            <img src="./resources/image/imagen 6r.png" alt="">
+            <p>Como puedes observar, es posible acceder al atributo privado, aunque no se debiera.</p>
+            <p>En cambio, la clase B define el atributo privado __contador anteponiendo un doble guión bajo. El resultado de hacer el mismo experimento cambia:</p>
+            <img src="./resources/image/imagen 6s.png" alt="">
+            <p>Si te fijas, no se puede acceder al atributo __contador fuera de la clase. Este identificador se ha sustituido por _B__contador.</p>
+
+            <h2>Polimorfismo</h2>
+            <p>Y llegamos al último concepto que veremos en este tutorial sobre programación orientada a objetos en Python.</p>
+            <p>Polimorfismo es la capacidad de una entidad de referenciar en tiempo de ejecución a instancias de diferentes clases.</p>
+            <p>Aunque este concepto te suene raro ahora mismo, lo vas a entender con un ejemplo. Imagina que tenemos las siguientes clases que representan animales:
+            </p>
+            <img src="./resources/image/imagen 6t.png" alt="">
+            <p>Las tres clases implementan un método llamado sonido(). Ahora observa el siguiente script:</p>
+            <img src="./resources/image/imagen 6u.png" alt="">
+            <p>En él se ha definido una función llamada a_cantar(). La variable animal que se crea dentro del bucle for de la función es polimórfica, ya que en tiempo de ejecución hará referencia a objetos de las clases Perro, Gato y Vaca. Cuando se invoque al método sonido(), se llamará al método correspondiente de la clase a la que pertenezca cada uno de los animales.</p>
+        </section>
+        <button id="realizar-quiz">Realizar Quiz</button>
+    </main>
+    <footer>
+        <p>©2024 All Rights Reserved. Design by Free Html Templates</p>
+    </footer>
+    <script src="./site.js"></script>
+</body>
+</html>

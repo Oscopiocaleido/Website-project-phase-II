@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="resources/image/Designer.png">
+    <title>AlgoByte</title>
+    <link rel="stylesheet" href="./style.css"> </head>
+<body>
+    <header>
+        <h1>Curso de Python - Lección 1</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Aprende a usar variables y literales en Python. Asigna y reasigna valores</h2>
+            <p>Uno de los elementos fundamentales de cualquier programa son las variables y, los conocidos literales en Python. Sin embargo, antes de comenzar, vamos a ver bien qué es un literal y qué es una variable en Python y sus diferencias.</p>
+            
+            <h2>Los literales en Python</h2>
+            <p>En general, un literal es un valor completamente "puro" o "primitivo" del lenguaje (Python en este caso). Es un elemento cuyo valor, se toma de forma literal por el lenguaje (de allí su nombre). Un número, una cadena de texto, básicamente cualquier valor primitivo, son considerados literales en Python. Vemos algunos ejemplos:</p>
+            <p>Ejemplos de literales en Python:</p>
+            <p>De hecho, anteriormente, quizás sin saberlo, ya has visto algunos literales, así que veamos algunos ejemplos del uso de típico de algunos literales comunes en Python:</p>
+            
+            <h2>Literales de cadenas de texto en Python</h2>
+            <img src="./resources/image/imagen 1a.png" alt="cadenas de texto">
+            <p>Así es, todo lo que hay entre las comillas "" se lo considera un literal. En este caso, un literal que es una cadena de texto y print interpreta su valor y lo muestra en pantalla. Por supuesto, existen varios literales más, como números, así que veamos:</p>
+            
+            <h2>Literales numéricos en Python</h2>
+            <img src="./resources/image/imagen 1b.png" alt="literales numericos">
+            <p>En este ejemplo, estarías mostrando por pantalla el número entero 1, seguido por un número "flotante" o decimal 1.5, y un número negativo decimal -5.2. Todos ellos, una vez más son simplemente interpretados con su valor literal y mostrados por pantalla (separados por un espacio). Ahora que ya entendemos los literales y su simplicidad, vamos a introducir el uso y asignación de variables en Python, pues para ello usaremos los literales en Python</p>
+        </section>
+        <section>
+            <h2>Variables y asignaciones en Python</h2>
+            <p>Como el nombre lo indica, las variables son elementos que pueden cambiar de valor. En Python a una variable se le pueden asignar diferentes valores dentro de un programa e incluso diferentes tipos. Así es, una misma variable puede empezar siendo un número 1 (un literal) y luego ser una cadena de texto (que también sería un literal). Aunque no es recomendable estar cambiando de tipos por claridad en tu código, es perfectamente posible y lo puedes hacer si lo consideras necesario.</p>
+            <p>De lo anterior, podemos ver entonces la estrecha relación entre variables y literales, pues usualmente a una variable, de uno u otro modo se le asigna el valor de un literal. Esto no siempre es cierto, pero ahora que apenas comenzamos, será el caso más común. Veamos entonces algunos ejemplos de asignación de variables en Python:</p>
+
+            <h2>Ejemplos de asignación de variables en Python</h2>
+            <p>Cuando hablamos de asignación se refiere a indicarle a Python que una variable cualquiera tiene un valor que le indicamos. De ese modo, esa variable queda con un valor asignado. Veamos:</p>
+            <img src="./resources/image/imagen 1c.png" alt="asignación">
+            <p>Como ves, la sintaxis es sencilla. Se le da un nombre a la variable en Python y luego, por medio del operador igual "=" se le da (asigna) un valor (que en este caso son literales). Así entonces, al ejecutar ese código, la pantalla mostrará "Hola de nuevo" y el número 134, al interpretar el valor asignado previamente a esas variables.</p>
+            <p>Ahora bien, la cosa no termina ahí, pues Python es muy flexible con las variables y podemos hacer muchas cosas interesantes con ellas. Veamos:</p>
+        </section>
+        <section>
+            <h2>Asignación entre variables y reasignación en Python</h2>
+            <p>En Python, no solo puedes asignarles valor una vez a las variables, sino que asignarles nuevos y diferentes valores cada que sea necesario. Para ser más claros, veamos un ejemplo:</p>
+
+            <h2>Ejemplo de reasignación de variables en Python</h2>
+            <img src="./resources/image/imagen 1d.png" alt="reasignación">
+            <p>Este ha sido un código interesante. Luego de ejecutarlo, mostrará Nuevo Texto seguido de 87877, 12.6 y de 87877 de nuevo, cada uno en su respectiva línea.</p>
+            <p>Veamos por partes todo el proceso, para estar claros.</p>
+            <p>Al arrancar con un valor, pero luego asignar otro, solo el último valor asignado es considerado. El valor anterior simplemente es sutituido por completo. Por ello es reasignación de variables en Python. Es importante notar que la variable llamada "variable_mixta" inició siendo una cadena de texto y terminó siendo un número decimal sin ningún problema. Como ves Python es muy flexible. Sin embargo, procura ser consistente con tu código para evitar confusiones. Algo también muy interesante es la variable llamada "nueva_variable" a la cual, no le asignamos una valor literal, sino otra variable. Pues bien, por supuesto también es posible y de ese modo, para este caso, "nueva_variable" se convirtió en una réplica de "mi_numero" pues ha recibido exactamente su mismo valor.</p>
+        </section>
+        <button id="realizar-quiz">Realizar Quiz</button>
+    </main>
+    <footer>
+        <p>©2024 All Rights Reserved. Design by Free Html Templates</p>
+    </footer>
+    <script src="./site.js"></script>
+</body>
+</html>

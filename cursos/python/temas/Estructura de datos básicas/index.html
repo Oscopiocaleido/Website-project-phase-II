@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="resources/image/Designer.png">
+    <title>AlgoByte</title>
+    <link rel="stylesheet" href="./style.css"> </head>
+<body>
+    <header>
+        <h1>Curso de Python - Lección 5</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Listas (arrays, arreglos o vectores) en Python. Uso y creación de listas en Python
+            </h2>
+            <p>Las listas en Python forman parte de lo que se conoce como estructuras de datos que nos ofrece Python (son un tipo de array). En otros lenguajes de programación, se los conoce como vectores. Las listas, son una estructura de datos de vital importancia, pues son útiles para resolver múltiples problemas que nunca podríamos solucionar sin ellas. Las listas en Python son utilizadas para almacenar múltiples valores en una única variable. Esto puede parecer innecesario, pero en realidad resuelve muchos desafíos. Veamos. En múltiples ocasiones es necesario almacenar gran cantidad de información en una variable y a menudo sucede que no conocemos con exactitud la cantidad de datos que debemos almacenar en ella. Sin embargo, sabemos que sí sería más de uno, como por ejemplo almacenar los nombres de las personas ingresadas en tu programa. En este caso, las listas nos permiten solucionar este tipo de problemas, pues en una misma lista podremos almacenar todos esos valores, sin importar cuántos sean. No tendría sentido crear 100 variables diferentes para almacenar 100 nombres en tu programa, ¿verdad? ¿Y qué tal si luego no son 100 sino 1000? ¡Aún peor! Para eso son las listas en Python. Mira a continuación un ejemplo:</p>
+
+            <h2>Ejemplo de listas en Python</h2>
+            <p>Imaginemos que queremos crear un programa con el cual podamos de algún modo almacenar los nombres e identificaciones de diferentes personas. El usuario de tu programa es quien suministra la información de cada persona. Así entonces, dado que es el usuario quien lo hace, nosotros no tenemos manera alguna de saber cuántas personas va a querer ingresar por medio de tu programa. Entonces ¿cómo crees que podrías hacer esto? No es posible con lo que sabemos hasta ahora, pero ya que conocemos un poco de listas, entonces apliquémoslo. Pero antes, analicemos el problema y aprendamos a usar listas en Python:</p>
+            <p>Usando listas en Python: ¡Pues bien!, Las listas o los vectores han venido para ayudarnos en múltiples circunstancias similares a la del ejemplo. Dado que una lista es capaz de almacenar múltiples valores en una misma variable, tenemos el elemento perfecto para almacenar la información de todos los usuarios. Podremos crear una lista de un tamaño cualquiera capaz de contener en sí los nombres de los usuarios y otra lista con las identificaciones de las personas.</p>
+            <p>Nota: Alternativamente podríamos crear una tabla (o matriz) de dos columnas que contenga en la primera columna los nombres y en la segunda las identificaciones. Ambas soluciones son válidas y vamos a ver ambas. En este artículo usando listas y en el siguiente usando tablas en la sección de tablas.</p>
+            <p>Muy bien, ahora que sabemos la gran utilidad de las listas, vectores o arreglos para nosotros, aprendamos más acerca de estos, veamos cómo crear una lista, cómo recorrerlas y algunos ejemplos de esto.</p>
+
+            <h2>¿Cómo declarar una lista en Python?</h2>
+            <p>Para declarar una lista en Python, se deben seguir las mismas normas básicas que se siguen para declarar una variable cualquiera, con un pequeño cambio en la sintaxis:</p>
+            <img src="./resources/image/imagen 5a.png" alt="">
+            <p>Todo muy claro, excepto por los "[]" o el uso de list(). Creamos una lista con un nombre cualquiera (nombre_de_la_lista u otra_lista) y le asignamos inicialmente una lista vacía. Sí, así es los corchetes "[]" sin nada en su interior crear una lista vacía. De hecho, al usar list(), sin poner nada entre los paréntesis, obtenemos lo mismo. Una vez la lista es creada, podemos agregarle elementos, quitarlos, obtenerlos, y varias cosas más. Sin embargo, también podemos crear listas con elementos en su interior desde el comienzo.</p>
+            <img src="./resources/image/imagen 5b.png" alt="">
+            <p>Como puedes ver, al poner valores entre corchetes "[]" y separados por comas, estarás indicando los elementos para tus listas. Cabe resaltar también que puedes agregar elementos mixtos, es decir, pueden ser de cualquier tipo de dato (texto, booleanos, números, etc.). Ya tenemos claro cómo declarar una lista en Python. Sin embargo, aún no sabemos cómo obtener los elementos de esa lista, es decir, una vez dicha lista tiene los elementos que queremos, cómo podemos obtener esa información y más aún, cómo obtener un elemento específico dentro de esa lista. Veámoslo: Obtener el valor de un elemento de una lista en Python. Es muy común el caso en el que tenemos una lista con una enorme cantidad de elementos, sin embargo, de todos esos elementos solo nos interesa uno en especial y corremos con la suerte de saber cuál es su valor o mejor aún su posición específica dentro de la lista.</p>
+            <img src="./resources/image/imagen 5c.png" alt="">
+            <p>Acá hay varias cosas por entender. Así que veámoslas de una en una:</p>
+            <p>Puedes acceder a una posición usando el nombre de la variable y corchetes "[]" indicando en su interior el índice que quieres obtener. Las posiciones de las listas arrancan enumeradas desde cero, así la primera posición se accede como [0] y la última sería el tamaño total menos 1. Se pueden usar índices negativos, así accediendo a los elementos de la lista contando dese atrás. Así un modo sencillo de obtener el último elemento es con [-1]. Si accedes a un índice que no existe, el programa fallará. Ya tenemos entonces una forma de acceder de forma individual a un elemento de una lista en Python, vamos a ver ahora como obtener todos los elementos de un vector de forma simple, recorriendo uno a uno:</p>
+
+            <h2>Recorrer una lista en Python</h2>
+            <p>En este caso, los ciclos vienen de gran ayuda. El caso general, sería hacerlo por medio de un ciclo for que vaya accediendo uno por uno a los elementos o incluso aumentando de uno en uno el índice que queremos acceder de la lista.</p>
+            <img src="./resources/image/imagen 5d.png" alt="">
+            <p>Como puedes ver, el ciclo for puede acceder directamente a los elementos y recorrerlos uno por uno. Sin embargo, a veces puedes necesitar los índices y también puedes acceder a cada elemento por medio de ese índice ya sea usando un ciclo for o incluso un while con un contador. Ahora que sabemos cómo acceder a las posiciones y cómo recorrer una lista en Python, veamos cómo se pueden agregar (append()) y remover (pop() o remove()) elementos de uan lista.</p>
+
+            <h2>Cómo agregar y remover elementos a una lista en Python</h2>
+            <p>Hay muchas operaciones que se pueden llevar a cabo con las listas en Python. Sin embargo, las más importantes son agregar y remover, elementos de la misma, así que veamos cómo hacerlo.</p>
+
+            <h2>Agregado elementos a una lista con append() en Python</h2>
+            <p>Como indico, se puede usar la función append de las listas para agregar un elemento.</p>
+            <img src="./resources/image/imagen 5e.png" alt="">
+            <p>Como ves, con cada llamada a append(), podrás agregar un nuevo elemento, de cualquier tipo a la lista. Sin embargo, hay otro modo de hacerlo, creando una nueva lista con los nuevos elementos.</p>
+
+            <h2>Uniendo listas en Python</h2>
+            <p>Hay otro modo de agregar elementos a una lista y es básicamente uniendo la lista existente con una nueva. De ese modo, podría evitar llamar a append() varias veces, sino unir todo de una sola vez. Así sería el ejemplo anterior, simplificado</p>
+            <img src="./resources/image/imagen 5f.png" alt="">
+            <p>Ahora veamos cómo remover elementos de una lista, de diferentes formas.</p>
+
+            <h2>Removiendo un elemento de una lista con pop() en Python</h2>
+            <p>La función pop, removerá un elemento según el índice que se indique.</p>
+            <img src="./resources/image/imagen 5g.png" alt="">
+            <p>Notar que acá debes indicar la posición del elemento en la lista. Esa posición debe existir, o sino fallará. También puedes usar índices negativos. Ahora, si no conoces la posición, puedes usar el valor que deseas borrar. Veamos:</p>
+
+            <h2>Removiendo un elemento de una lista con remove() en Python</h2>
+            <p>La función remove, removerá un elemento según el valor que este tenga al interior de la lista.</p>
+            <img src="./resources/image/imagen 5h.png" alt="">
+            <p>Hay cosas interesantes acá. Primero, remove buscará por ti el elemento y lo borrará. Sin embargo, solo borrará el primero que encuentra, no todos ellos. Por lo tanto, dado que "hello" estaba dos veces en nuestra lista, solo removió el primero. Muy bien, llegó el momento de afianzar nuestros conocimientos viendo un ejemplo. Ahora que tenemos claro cómo declarar una lista en Python, cómo recorrerla, cómo acceder a sus elementos, además de cómo agregarlos y removerlos, vamos a ver un ejemplo basado en el problema que planteé al inicio del artículo (el de los nombres e identificaciones de personas).</p>
+            
+            <h2>Ejemplo de listas en Python</h2>
+            <p>El problema es simple, queremos crear un programa con el cual podamos guardar los nombres y las identificaciones de múltiples personas (no sabemos cuántas) sin perder ninguna de ellas. El usuario es el encargado de suministrar la información de cada persona. Vamos a suponer que el usuario solo podrá ingresar un máximo de tres personas, para así poder comprobar fácilmente nuestro programa. Sin embargo, puedes hacerlo sin límite si prefieres:</p>
+            <img src="./resources/image/imagen 5i.png" alt="">
+            <p>Ahora que ya conocemos todo bien acerca de las listas en Python (arreglos o vectores en otros lenguajes), podremos hablar acerca de tablas que en realidad no son tan diferentes a lo que ya he explicado.</p>
+        </section>
+        <section>
+            <h2>Tablas (matrices o listas de listas) en Python. Uso y creación de tablas en Python></h2>
+            <p>Las tablas en Python forman parte de lo que se conoce como estructuras de datos que nos ofrece Python. Cabe resaltar que, si has programado en otros lenguajes, las tablas no son más que lo que se conoce como matrices o listas de listas en otros lenguajes de programación. Las tablas, son una estructura de datos de vital importancia, pues son útiles para resolver múltiples problemas que no podríamos solucionar sin ellas. Las tablas son utilizadas para almacenar múltiples valores en una única variable. De hecho, al final se trata de una lista que contiene otras listas en su interior. En general, la lógica es la misma que se maneja en las listas y su propósito es el mismo. Sin embargo, las tablas en Python van un poco más allá, pues en esencia te dan múltiples niveles más de "anidamiento", teniendo así listas al interior de otras. No nos vamos a detener mucho en el proceso, pues la lógica es bastante similar.></p>
+
+            <h2>Ejemplo de tablas en Python</h2>
+            <p>Imaginemos que queremos crear un programa con el cual podamos de algún modo almacenar los nombres e identificaciones de diferentes personas. De hecho, este mismo ejemplo, lo vismos en el artículo sobre listas. Pues en esta ocasión, vamos a resolverlo usando solo una lista, la cual a su vez contendrá otras dos (creando así una tabla). Una con los nombres y otra con las identificaciones. Analicemos el problema y aprendamos a usar tablas en Python:></p>
+            <p>Usando tablas en Python: ¡Pues bien!, Las tablas o las matrices han venido para ayudarnos en múltiples circunstancias similares a las del ejemplo. Dado que una lista es capaz de almacenar múltiples listas en su interior, la converimos en una tabla (con filas y columnas) y asignamos valores en cada casilla según requerimos, indicando la fila y la columna correspondientes.></p>
+            <p>Muy bien, ahora que sabemos la gran utilidad de las tablas, listas de listas o matrices para nosotros, aprendamos más acerca de ellas, veamos cómo crear una tabla, cómo recorrerlas y algunos ejemplos de esto.></p>
+
+            <h2>¿Cómo crear una tabla en Python?</h2>
+            <p>Para declarar una tabla en Python, se deben seguir las mismas normas básicas que se siguen para declarar una lista, teniendo en cuenta que contendrá listas en su interior:</p>
+            <img src="./resources/image/imagen 5j.png" alt="">
+            <p>Una vez la tabla es creada, podemos agregarle elementos, quitarlos, obtenerlos, y varias cosas más, tal como hacemos con la listas tradicionales. Ya tenemos claro cómo declarar una tabla en Python. Sin embargo, aún no sabemos cómo obtener los elementos de esa tabla, es decir, una vez dicha tabla tiene los elementos que queremos, cómo podemos obtener esa información y más aún, cómo obtener un elemento específico dentro de esa tabla. Veámoslo: Obtener el valor de un elemento de una tabla en Python. Es muy común el caso en el que tenemos una tabla con una enorme cantidad de elementos, sin embargo, de todos esos elementos solo nos interesa uno en especial y corremos con la suerte de saber cuál es su valor o mejor aún su posición específica dentro de la tabla. Con posición me refiero a la fila y a la columna. Es decir la lista que contiene el elemento en su interior (fila) y luego el elemento específico en esa lista (columna).</p>
+            <img src="./resources/image/imagen 5k.png" alt="">
+            <p>Acá hay varias cosas por entender. Así que veámoslas de una en una:</p>
+            <p>Puedes acceder a una posición usando el nombre de la variable y corchetes "[]" indicando en su interior el índice que quieres obtener. Ahora se usan corchetes para cada lista. El primer conjunto de corchetes accede a la lista, el segundo a una posición de esa lista. Ya tenemos entonces una forma de acceder de forma individual a un elemento de una tabla en Python, vamos a ver ahora como obtener todos los elementos de una tabla, recorriendo uno a uno:</p>
+
+            <h2>Recorrer una tabla en Python</h2>
+            <p>En este caso, los ciclos vienen de gran ayuda. El caso general, sería hacerlo por medio de un ciclo for que vaya accediendo uno por uno a los elementos o incluso aumentando de uno en uno el índice que queremos acceder de la tabla, tanto para la fila como para la columna.</p>
+            <img src="./resources/image/imagen 5l.png" alt>
+            <p>Como puedes ver, el ciclo for puede acceder directamente a los elementos y recorrerlos uno por uno. Sin embargo, a veces puedes necesitar los índices y también puedes acceder a cada elemento por medio de ese índice ya sea usando un ciclo for o incluso un while con un contador. Como imaginarás, al ser simplemente listas con listas en su interior, seguirás teniendo acceso a las mismas funciones para agregar, buscar y eliminar elementos, así que hagamos uso de todo ello para resolver el ejercicio que planteamos al comienzo.</p>
+
+            <h2>Ejemplo de tablas en Python</h2>
+            <p>El problema es simple, queremos crear un programa con el cual podamos guardar los nombres y las identificaciones de múltiples personas (no sabemos cuántas) sin perder ninguna de ellas. El usuario es el encargado de suministrar la información de cada persona. Vamos a suponer que el usuario solo podrá ingresar un máximo de tres personas, para así poder comprobar fácilmente nuestro programa. Sin embargo, puedes hacerlo sin límite si prefieres:</p>
+            <img src="./resources/image/imagen 5m.png" alt="">
+            
+            <h2>Diccionarios (listas asociativas) en Python. Uso y creación de diccionarios en Python</h2>
+            <p>Los diccionarios en Python forman parte de lo que se conoce como estructuras de datos que nos ofrece Python. Cabe resaltar que, si has programado en otros lenguajes, los diccionarios no son más que listas asociativas o listas con llaves, donde cada llave es un identificador único de una posición de la lista. Básicamente, en lugar de usar números de 0 a N, se usan llaves que pueden ser strings generalmente.</p>
+            <p>En general, la lógica es la misma que se maneja en las listas y su propósito es el mismo. Sin embargo, los diccionarios en Python nos permiten organizar e identificar de manera única las posiciones de la lista, usando lo que se conoce como llaves.</p>
+
+            <h2>Ejemplo de diccionarios en Python</h2>
+            <p>Imaginemos que queremos crear un programa con el cual podamos de algún modo almacenar los nombres e identificaciones de diferentes personas. De hecho, una vez más, este mismo ejemplo lo vimos en los artículos anteriores. Pero esta vez, lo vamos a resolver usando diccionarios, lo cual nos permitirá crear una solución más fácil de entender y leer. Analicemos el problema y aprendamos a usar diccionarios en Python:</p>
+            <p>Usando diccionarios en Python: Los diccionarios o listas asociativas, nos permitirán crear una lista indicando nombres únicos y fáciles de recordar y asociar en nuestro código. Un diccionario puede almacenar múltiples elementos en su interior, lo cual incluye otros diccionarios o listas o datos primitivos.</p>
+            <p>Muy bien, ahora que sabemos la gran utilidad de los diccionarios, aprendamos más acerca de ellos, veamos cómo crear un diccionario, cómo recorrerlos y algunos ejemplos de esto.
+            </p>
+
+            <h2>¿Cómo crear un diccionario en Python?</h2>
+            <p>Para declarar un diccionario en Python, se deben seguir las mismas normas básicas que se siguen para declarar una lista, PERO en lugar de usar corchetes "[]" usaremos llaves "{}" para declararlos:</p>
+            <img src="./resources/image/imagen 5n.png" alt="">
+            <p>Una vez el diccionario es creado, podemos agregarle elementos, quitarlos, obtenerlos, y varias cosas más, tal como hacemos con las listas (usando los mismos métodos). Ya tenemos claro cómo declarar un diccionario en Python. Sin embargo, aún no sabemos cómo obtener los elementos de ese diccionario, es decir, una vez dicho diccionario tiene los elementos que queremos, cómo podemos obtener esa información y más aún, cómo obtener un elemento específico dentro de ese diccionario. Veámoslo:</p>
+            
+            <h2>Obtener el valor de un elemento de un diccionario en Python</h2>
+            <p>Es muy común el caso en el que tenemos un diccionario con una enorme cantidad de elementos, sin embargo, de todos esos elementos solo nos interesa uno en especial y corremos con la suerte de saber cuál es su valor o mejor aún su llave específica dentro del diccionario. </p>    
+            <img src="" alt="">
+            <p>En esencia, la manera de acceder es la misma que se usaba en las listas, es decir, usando corchetes "[]". Sin embargo, ahora en lugar de indicar un índice numérico, indicas la llave del diccionario. Ya tenemos entonces una forma de acceder a un elemento de un diccionario en Python, vamos a ver ahora cómo obtener todos los elementos de un diccionario, recorriendo uno a uno:</p>
+
+            <h2>Recorrer un diccionario en Python</h2>
+            <p>En este caso, los ciclos vienen de gran ayuda. El caso general, sería hacerlo por medio de un ciclo for que vaya accediendo uno por uno a los elementos o incluso aumentando de uno en uno el índice que queremos acceder del diccionario, tanto para la fila como para la columna.</p>
+            <img src="" alt="">
+            <p>Como puedes ver, con el ciclo for puede recorrer una por una las llaves del diccionario y luego usar esa llave para mostrar el valor asignado a la misma dentro del diccionario. Veamos ahora cómo resolver el problema que planteamos al comienzo, usando diccionarios en Python.</p>
+
+            <h2>Ejemplo de diccionarios en Python</h2>
+            <p>El problema es simple, queremos crear un programa con el cual podamos guardar los nombres y las identificaciones de múltiples personas (no sabemos cuántas) sin perder ninguna de ellas. El usuario es el encargado de suministrar la información de cada persona. Vamos a suponer que el usuario solo podrá ingresar un máximo de tres personas, para así poder comprobar fácilmente nuestro programa. Sin embargo, puedes hacerlo sin límite si prefieres:</p>
+            <img src="" alt="">
+            <p>Como puedes ver, en esencia, es la misma funcionalidad que hicimos en los artículos anteriores. Sin embargo, ahora es más legible el código, puesto que usamos llaves como "nombres" e "identificaciones" en lugar de solo posiciones numéricas como 0 y 1.</p>
+        </section>
+        <button id="realizar-quiz">Realizar Quiz</button>
+    </main>
+    <footer>
+        <p>©2024 All Rights Reserved. Design by Free Html Templates</p>
+    </footer>
+    <script src="./site.js"></script>
+</body>
+</html>

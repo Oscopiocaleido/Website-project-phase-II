@@ -1,0 +1,107 @@
+/*Main*/
+:root{
+    --primary-color:#7a8eb0;
+    --secondary-color: #abc4df;
+    --tertiary-color: #daeaf2;
+    --bg-color: #f9faf4;
+}
+  
+*{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+}
+  
+/*-------------------------------------------------------*/
+/*Fonts settings*/
+  
+@font-face {
+      font-family: blogger_sans;
+      src: url(./resources/fonts/Blogger/BloggerSans.ttf);
+  
+}
+  
+@font-face {
+      font-family: blogger_light;
+      src: url(./resources/fonts/Blogger/BloggerSans-Light.ttf);
+}
+  
+ @font-face {
+      font-family: blogger_bold;
+      src: url(./resources/fonts/Blogger/BloggerSans-Bold.ttf);
+}
+  
+@font-face {
+      font-family: blogger_medium;
+      src: url(./resources/fonts/Blogger/BloggerSans-Medium.ttf);
+ }
+/*-------------------------------------------------------*/
+/*Body*/
+body {
+    background-image: url(./resources/image/descargar.png); 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    font-family: blogger_sans;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fff; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+
+  
+  /* Título */
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #7a8eb0; 
+  }
+  
+  /* Campos de texto */
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+   /* Botón */
+   button {
+    background-color: var(--secondary-color); 
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: var(--primary-color); 
+  }
+  
+  /* Enlace */
+  a {
+    color: #7a8eb0; 
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }

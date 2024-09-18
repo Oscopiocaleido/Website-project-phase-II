@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="resources/image/Designer.png">
+    <title>AlgoByte</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="container">
+    <header>
+        <h1>Quiz 6: Programación Orientada a Objetos</h1>
+        <p>Tienes 5 minutos para completar este quiz.</p>
+        <p id="tiempo-restante">Tiempo restante: 5 minutos y 0 segundos</p>      
+    </header>
+    <main>
+        <section>
+            <form id="quizForm" onsubmit="return verificarRespuestas()">
+            <h2>Indique si las siguientes afirmaciones son verdaderas o falsas:</h2>
+            <ul>
+                <h3>a. En Python, todas las clases heredan de la clase base object.</h3>
+                <li>
+                    <input type="radio" name="q1" value="v" class="verdaderoFalso"> Verdadero <br/> 
+                    <input type="radio" name="q1" value="f" class="verdaderoFalso"> Falso <br/>
+                </li>
+                <h3>b. Los métodos especiales en Python se utilizan para personalizar el comportamiento de los objetos.</h3>
+                <li>
+                    <input type="radio" name="q2" value="v" class="verdaderoFalso"> Verdadero <br/> 
+                    <input type="radio" name="q2" value="f" class="verdaderoFalso"> Falso <br/>
+                </li>
+                <h3>c. Los atributos de clase son compartidos por todas las instancias de una clase.</h3>
+                <li>
+                    <input type="radio" name="q3" value="v" class="verdaderoFalso"> Verdadero <br/> 
+                    <input type="radio" name="q3" value="f" class="verdaderoFalso"> Falso <br/>
+                </li>
+                <h3>d. La herencia múltiple no está permitida en Python.</h3>
+                <li>
+                    <input type="radio" name="q4" value="v" class="verdaderoFalso"> Verdadero <br/> 
+                    <input type="radio" name="q4" value="f" class="verdaderoFalso"> Falso <br/>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Seleccione la opción correcta para cada enunciado:</h2>
+            <ul>
+                <li>
+                    <h3>a. ¿Cuál es la palabra clave para definir una clase en Python?</h3>
+                    <input type="radio" name="q5" value="a" class="seleccionSimple"> class<br/> 
+                    <input type="radio" name="q5" value="b" class="seleccionSimple"> struct<br/>
+                    <input type="radio" name="q5" value="c" class="seleccionSimple"> object<br/> 
+                </li>
+                <li>
+                    <h3>b. ¿Qué es un método constructor en Python?</h3>
+                    <input type="radio" name="q6" value="a" class="seleccionSimple"> Un método que se ejecuta cuando se crea un objeto.<br/> 
+                    <input type="radio" name="q6" value="b" class="seleccionSimple"> Un método que destruye un objeto.<br/>
+                    <input type="radio" name="q6" value="c" class="seleccionSimple"> Un método que clona un objeto.<br/> 
+                </li>
+                <li>
+                    <h3>c. ¿Cómo se accede a un atributo de un objeto en Python?</h3>
+                    <input type="radio" name="q7" value="a" class="seleccionSimple"> objeto.atributo<br/> 
+                    <input type="radio" name="q7" value="b" class="seleccionSimple"> atributo.objeto<br/>
+                    <input type="radio" name="q7" value="c" class="seleccionSimple"> objeto[atributo]<br/> 
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Seleccione una o más opciones que se ajusten al enunciado:</h2>
+            <ul>
+                <li>
+                    <h3>a. ¿Cuáles de los siguientes son pilares de la programación orientada a objetos?</h3>
+                    <input type="checkbox" name="q8" value="a1" class="seleccionMultiple"> Encapsulación<br/>
+                    <input type="checkbox" name="q8" value="b1" class="seleccionMultiple"> Herencia<br/>
+                    <input type="checkbox" name="q8" value="c1" class="seleccionMultiple"> Polimorfismo<br/>
+                </li>
+                <li>
+                    <h3>b. ¿Cuáles de los siguientes son métodos especiales en Python?</h3>
+                    <input type="checkbox" name="q9" value="a2" class="seleccionMultiple"> __init__<br/>
+                    <input type="checkbox" name="q9" value="b2" class="seleccionMultiple"> __str__<br/>
+                    <input type="checkbox" name="q9" value="c2" class="seleccionMultiple"> __len__<br/>
+                </li>
+                <li>
+                    <h3>c. ¿Cuáles de las siguientes son técnicas de programación orientada a objetos en Python?</h3>
+                    <input type="checkbox" name="q10" value="a3" class="seleccionMultiple"> Bimorfismo<br/>
+                    <input type="checkbox" name="q10" value="b3" class="seleccionMultiple"> Declaración<br/>
+                    <input type="checkbox" name="q10" value="c3" class="seleccionMultiple"> Polimorfismo<br/>
+                </li>
+            </ul>
+        </section>
+        <div id="resultado"></div>
+        <button type="submit" id="submit-quiz">Finalizar Quiz</button>
+        <p id="puntuacion"></p>
+    </form>
+    </main>
+    </div>
+<script src="./site.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon" type="png" href="resources/image/Designer.png">
+    <title>AlgoByte</title>
+    <link rel="stylesheet" href="./style.css"> </head>
+<body>
+    <header>
+        <h1>Curso de Python - Lección 2</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Condicional if en Python. Cómo crear, escribir y usar un if en Python</h2>
+            <p>Los condicionales if en Python, son una estructura de control condicional, también llamadas estructuras selectivas de casos simples (porque solo definen un posible flujo), las cuales nos permiten tomar cierta decisión al interior de nuestro programa, es decir, nos permiten determinar qué acciones ejecutar según cierta. Por ejemplo, determinar si un número cualquiera es mayor que 10 y de acuerdo a esto mostrar un mensaje (o cualquier acción que sea necesaria).</p>
+            <p>Básicamente, un condicional if en Python, es una estructura que nos posibilita definir las acciones a ejecutar si se cumple cierta condición y de ese modo modificar la ejecución de tareas en un programa según lo necesites.</p>
+
+            <h2>¿Cómo funciona el condicional If en Python?</h2>
+            <p>Para comprender mejor cómo funciona el condicional if, una muy buena forma es partiendo de un ejemplo. Supongamos que queremos verificar si el resultado de una suma ingresada por el usuario es correcto o no. Para este ejemplo, el condicional if, es el encargado de verificar si el resultado ingresado corresponde o no a la respuesta esperada de esa suma. El condicional if, funciona verificando la condición ingresada y de acuerdo a su valor de verdad (falso o verdadero) lleva a cabo o no las instrucciones que hayamos indicado.</p>
+            <p>Espero haber sido claro, si no es así, no te preocupes, pues veremos ya mismo veremos ese ejemplo para entender todo mejor. Sin embargo, antes debemos comprender cómo se escribe un condicional if en Python. Veamos.</p>
+
+            <h2>Sintaxis del condicional If en Python:</h2>
+            <p>La sintaxis de un condicional if, es bastante simple e incluso intuitiva. Vamos entonces a ver rápidamente como es la estructura para ir luego a unos ejemplos y quedar bien claros:</p>
+            <img src="./resources/image/imagen 2a.png" alt="sintaxis">
+            <p>Vamos ahora a ver línea por línea el anterior código para comprender todo. Posteriormente, veremos un ejemplo con valores reales. Línea 1: En esta línea está prácticamente todo lo esencial del condicional, aquí le hemos dicho al interior del argumento del condicional if (lo que está entre paréntesis), cuál es la condición que se debe cumplir para que se ejecute el bloque de instrucciones que contiene en su interior. Adicionalmente, esta línea termina con dos puntos ":", indicando el final de esa instrucción condicional. Esta línea es en efecto esencial ya que nos da la pauta para que el programa determine si ejecutará o no el bloque de instrucciones en su interior.</p>
+            <p>Líneas 2 y 3: Estas líneas comienzan con una indentación (muy importante) y contienen también el posible bloque de instrucciones a ejecutar. Esta indentación de cada línea (puede ser una tabulación o un par de espacios) es indispensable, pues indica lo que va dentro del condicional. De ese modo, TODO lo que tenga esa indentación después del condicional if, se considera que solo será ejecutado si la condición de cumplió.</p>
+            <p>Líneas 4 a 6: En estas líneas, se encuentran las instrucciones restantes del programa en Python. Como verás estas ya NO llevan la indentación y, por ende, se considera que están por fuera del condicional. Quise ponerlas allí, para que quede claro que sin importar si la condición se cumple o no, el programa siempre va a ejecutar esas líneas, es decir, las líneas que se encuentran después del bloque condicional (sin esa indentación), siempre se ejecutarán sin importar si la condición se cumplió o no.</p>
+
+            <h2>Ejemplos de condicional If en Python</h2>
+            <p>A continuación vamos a ver unos cuantos ejemplos para comprender de manera adecuada el uso de los condicionales if en Python, recuerda que si no comprendes alguno de estos ejemplos o tienes alguna pregunta o sugerencia, puedes dejarlas en la sección de comentarios</p>
+            <p>Ejemplo 1: Verificación de valores en Python. Vamos a retomar el ejemplo anterior. Deseábamos un sistema en el cual un usuario nos ingresaba el resultado de una suma mostrada en pantalla y verificábamos si el resultado ingresado era el correcto de esa operación. En caso de ser correcto, el sistema muestra un mensaje de felicitación.</p>
+            <p>Solución Ejemplo 1: Debemos entonces determinar cuál va a ser nuestra condición a evaluar. En este ejemplo, la condición debe ser que la respuesta ingresada, sea igual al resultado de la suma, veamos entonces cómo realizar esto:</p>
+            <img src="./resources/image/imagen 2b.png" alt="ejemplo 1">
+        </section>
+        <section>
+            <h2>Condicional if else en Python. Cómo crear, escribir y usar el if else en Python</h2>
+            <p>Los condicionales if else, son una estructura de control que nos permite tomar cierta decisión al interior de nuestro programa. Es decir, nos permite determinar qué acciones tomar dada o no cierta condición. Es importante notar la parte del NO, pues ya no solo definimos qué hacer en caso de que se cumpla, sino (else) también qué hacer si no se cumple cierta condición. Por ejemplo, determinar si la contraseña ingresada por el usuario es válida o no y de acuerdo a esto darle acceso al sistema o mostrar un mensaje de error. Una vez mças, ya definimos, no solo lo que haríamos si la contraseña coincida, sino (else) lo que haríamos si la contraseña no coincide.</p>
+            <p>Se les conoce también como estructuras selectivas de casos dobles (porque definen ambas posibilidades en la ejecución --si se cumple y si no se cumple --).</p>
+            <p>En resumen, un condicional if else es una estructura que nos posibilita definir las acciones que se deben llevar a cabo si se cumple cierta condición y también indicar las acciones que se deben ejecutar en caso de que no se cumpla; generando así una separación o bifurcación en la ejecución del programa.</p>
+
+            <h2>¿Cómo funciona un Condicional If Else?</h2>
+            <p>Para comprender mejor cómo funciona el condicional if else, una muy buena forma es partiendo de un ejemplo. Imaginemos, que en nuestro programa, deseamos implementar un sistema de inicio de sesión de usuarios, comprobando si la información suministrada coincide con unos los valores correctos y en ese caso mostrar un mensaje de bienvenida, y en caso de que no, se mostrará un mensaje de error. Como podemos imaginar, es entonces necesario hacer que nuestro programa, tome una decisión, de acuerdo a los valores ingresados por el usuario, y definir los dos casos posibles (si falló o no). Es para esto que sirve el condicional if else, nos permite definir una condición que se debe cumplir y de acuerdo a su cumplimiento o no tomar una acción correspondiente. Espero haber sido claro. Si no, no te preocupes, pues veremos ya mismo algunos detalles para entender todo mejor.</p>
+
+            <h2>Sintaxis del Condicional If Else en Python:</h2>
+            <p>La sintaxis de un condicional if else, es en principio similar a la del condicional if, pero adicionando una nueva "estructura" que sería el else, el cual indica la acción o conjunto de acciones a llevar a cabo si no se cumplió la condición inicial (la del if). Cabe resaltar que el else, no puede existir por sí solo, solo tiene sentido si antes se indicó un if. Es decir, SIEMPRE se pone un else inmediatamente después del if, en caso de ser necesario. El else es incapaz de funcionar por sí solo, debes acompañarlo siempre con un if. Veamos entonces como es la sintaxis del if else en Python:</p>
+            <img src="./resources/image/imagen 2c.png" alt="sintaxis">
+            <p>Vamos ahora a ver línea por línea el anterior código para comprender todo y quedar claros. Posteriormente veremos un ejemplo con valores reales. Línea 1: En esta línea está prácticamente todo lo esencial del if, aquí le hemos dicho, al interior del argumento del condicional if (lo que está entre paréntesis), cuál es la condición que se debe cumplir para que se ejecute el bloque de instrucciones que contiene en su interior. Adicionalmente, esta línea termina con dos puntos ":", indicando el final de esa instrucción condicional. Esta línea es en efecto esencial ya que nos da la pauta para que el programa determine si ejecutará o no el bloque de instrucciones en su interior. Solo se ejecuta si se cumplió la condición.</p>
+            <p>Líneas 2 y 3: Estas líneas comienzan con una indentación (muy importante) y contienen también el posible bloque de instrucciones a ejecutar, solo cuando se cumpla la condición. Esta indentación de cada línea (puede ser una tabulación o un par de espacios) es indispensable, pues indica lo que va dentro del condicional. De ese modo, TODO lo que tenga esa indentación después de la línea 1, se considera que será ejecutado solo si la condición se cumplió.</p>
+            <p>Línea 4: Acá se indica el else, terminando con dos puntos ":". Esta indica entonces, que hay una serie de instrucciones a continuación (con su respectiva indentación) que deberán ejecutarse si la condición de la línea 1 NO se cumplió.</p>
+            <p>Línea 5 y 6: Estas líneas, también llevan una indentación, y todas aquellas que estén indentadas, después de la línea 4, se donsideran que solo serán ejecutadas si la condición inicial NO se cumplió.</p>
+            <p>Líneas 7 a 9: En estas líneas, se encuentran las instrucciones restantes del programa en Python. Como verás estas ya NO llevan la indentación y por ende, se considera que están por fuera del condicional if else. Por ende, se ejecutarán siempre, sin importar el condicional. El programa siempre va a ejecutar estas líneas, pues su ejecución no depende de ninguna condición, sin importar si se ejecutó el if o el else.</p>
+
+            <h2>Ejemplos de Condicional If else en Python</h2>
+            <p>A continuación vamos a ver unos cuantos detalles prácticos para comprender de manera adecuada el uso de los condicionales if else en Python. Recuerda que si no comprendes alguno de estos ejemplos o tienes alguna pregunta o sugerencia sobre estos o cualquier contenido de la sección, puedes dejarlas en la sección de comentarios</p>
+            <p>Ejemplo 1: Sistema de inicio de sesión en Python. Vamos a retomar el ejemplo anterior, deseamos implementar un sistema de inicio de sesión de usuarios, es decir, queremos que el usuario nos ingrese una contraseña y deseamos comprobar si coincide con el valor que esperamos. En caso de que los datos sean correctos se mostrará un mensaje de bienvenida, y en caso de que no, se mostrara un mensaje de error y finalizará el programa.</p>
+            <p>Solución Ejemplo 1: Debemos entonces determinar cuál va a ser nuestra condición a evaluar, en este ejemplo, la condición debe ser que la contraseña, sea idéntica a la establecida en nuestro sistema, veamos entonces como realizar esto:</p>
+            <img src="./resources/image/imagen 2d.png" alt="ejemplo 1">
+        </section>
+        <section>
+            <h2>Condicionales anidados en Python. Crea condiciones al interior de otros condicionales</h2>
+            <p>Los condicionales, permiten escribir código en su interior y en realidad, nada de impide incluso al interior de un condicional, poner otros (u otros). A eso se le llama condiciones anidados, pues una estructura condicional dentro de otra. De hecho, puedes anidar cuantos condicionales requieras, aunque no se recomienda más de dos o tres niveles.</p>
+            <p>Dentro de un condicional, puedes poner cualquier instrucción válida y eso incluye a cualquier tipo de condicional que necesites y el funcionamiento, sigue siendo el mismo. De hecho, Python tiene una instrucción llamada elif() que permite simplificar un if() que se encuentra al interior de un else en Python.</p>
+            <p>Como ya comprendemos bien los condicionales de artículos anteriores, vamos directo a los detalles en el código.</p>
+
+            <h2>Ejemplo de condicionales anidados y elif en Python</h2>
+            <p>Como siempre, para ilustrar correctamente cualquier caso de programación, un ejemplo viene de gran ayuda. Veamos entonces un ejemplo de un condicional anidado y luego cómo podemos simplificarlo con elif.</p>
+
+            <h2>Ejemplo de un condicional anidado en Python
+            </h2>
+            <p>En este ejemplo, vamos a anidar un if al interior de otro y luego un if al interior de un else. De ese modo, cubrimos varios casos:
+            </p>
+            <img src="./resources/image/imagen 2e.png" alt="ejemplo">
+            <p>En esencia, en el ejemplo anterior, además estamos verificando la longitud del valor ingresado, de modo que indicamos si es un poco más segura o no. Los condicionales anidados, nos permiten reaccionar a cada caso, pues mostramos un mensaje acorde a cada condición que se cumple.
+            </p>
+            <p>Ahora veamos cómo simplificar un poco este programa en Python con un elif.
+            </p>
+
+            <h2>Ejemplo de uso de elif en Python para simplificas un condicional anidado en Python</h2>
+            <p>Ahora veamos cómo simplificar un poco este programa en Python con un elif:</p>
+            <img src="./resources/image/imagen 2f.png" alt="ejemplo de elfi">
+            <p>Como ves, al usar elif, hemos puesto el else y el if de su interior en una sola línea y funciona de manera equivalente.</p>
+            <p>Notar que, en este caso, tiene completo sentido usar el elif, pues la contraseña siempre será incorrecta si su longitud es inferior a 8 caracteres.</p>
+            <p>Python es muy flexible y siempre, además, encontrarás formas de simplificar tu código. Como siempre, es solo cuestión de practicar y explorar.</p>
+        </section>
+        <button id="realizar-quiz">Realizar Quiz</button>
+    </main>
+    <footer>
+        <p>©2024 All Rights Reserved. Design by Free Html Templates</p>
+    </footer>
+    <script src="./site.js"></script>
+</body>
+</html>
