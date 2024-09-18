@@ -7,3 +7,5 @@ Information about this project repository:
 #The code comments are in Spanish 
 
 #The texts of the page are also in Spanish. 
+
+#All the images of the project are from the Flaticon site
